@@ -39,6 +39,10 @@
         <link rel="None" type="image/png" href="images/favicons/mstile-310x150.png" />
         <link rel="shortcut icon" type="image/png" href="images/favicons/favicon-196x196.png" /> -->
     <!-- favicon end -->
+        <meta name="description" content="Digitale Edition der Dokumente zu den Mächtekongressen 1818–1822 in TEI XML"/>
+        <meta name="author" content="Karin Schneider"/>
+        <meta name="author" content="Stephan Kurz"/>
+        <meta name="keywords" content="Archive studies, Digital humanities, Modern history, Political history, Science of history, Concert of Europe, Congress files, Congress of Aix-la-chapelle, Congress of Laibach, Congress of Troppau, Congress of Verona, Congress of Vienna, Congress System, European Concert of Powers, Great Powers, History of diplomacy"/>
         <link rel="icon" type="image/svg+xml" href="{$project_logo}" sizes="any" />
         <link rel="profile" href="http://gmpg.org/xfn/11"></link>
         <title><xsl:value-of select="$html_title"/></title>

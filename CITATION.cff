@@ -1,0 +1,71 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Maechtekongresse 1818–1822 Digitale Edition
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Karin
+    family-names: Schneider
+    orcid: 'https://orcid.org/0000-0002-4523-7656'
+  - given-names: Stephan
+    family-names: Kurz
+    affiliation: Austrian Academy of Sciences
+    orcid: 'https://orcid.org/0000-0003-2546-2570'
+identifiers:
+  - type: url
+    value: 'https://maechtekongresse.acdh.oeaw.ac.at'
+    description: Frontend
+  - type: doi
+    value: 10.5281/zenodo.4590268
+    description: Dataset
+  - type: other
+    value: 978-3-9504783-0-3
+    description: ISBN
+repository-code: 'https://github.com/KONDE-AT/maechtekongresse-static/'
+url: 'https://maechtekongresse.acdh.oeaw.ac.at'
+repository: 'https://github.com/KONDE-AT/maechtekongresse/'
+abstract: >-
+  Die Kongresse von Aachen (1818), Troppau (1820), Laibach
+  (1821) und Verona (1822) sind Ausdruck und Ergebnis einer
+  im Vergleich zum 18. Jahrhundert neuen Konzeption von
+  Außenpolitik: An die Stelle von zwischenstaatlicher
+  Rivalität und Machtpolitik trat eine in diesem Ausmaß
+  bisher nicht praktizierte zwischenstaatliche Kooperation.
+  Die Erfahrungen aus den Napoleonischen Kriegen hatte
+  gezeigt, dass nur ein gemeinsames Vorgehen der
+  europäischen Mächte zu einem dauerhaften Frieden führen
+  würde. Die auf dem Wiener Kongress (1814/15) verhandelte
+  politische und territoriale Neuordnung Europas war das
+  Resultat dieser zwischenstaatlichen Zusammenarbeit. Auf
+  völkerrechtlicher Ebene wurde diese Kooperation zwischen
+  1813 und 1818 durch ein komplexes System verschiedener
+  Allianzen abgesichert und erfuhr als Europäisches Konzert
+  einen gewissen Grad an Institutionalisierung.
+
+
+  Dieser strukturelle Wandel in der Außenpolitik erforderte
+  eine verdichtete Kommunikation zwischen den Staaten. In
+  Aachen, Troppau, Laibach und Verona trafen die
+  Mächtevertreter in der Nachfolge des Wiener Kongresses
+  zusammen, um kollektiv über offene Fragen von europäischem
+  Interesse zu beraten, Krisen abzuwenden beziehungsweise
+  einer Lösung zuzuführen und Ruhe und Frieden in Europa zu
+  garantieren. Die hier edierten Protokolle und anderen
+  Schriftstücke aus dem Österreichischen Staatsarchiv (Link
+  zum Teilbestand im Archivinformationssystem) zeigen die
+  offizielle Lesart der Verhandlungen und sind entsprechend
+  quellenkritisch zu betrachten. Dennoch geben sie einen
+  Einblick in die Grundlagen und die Funktionsweise des
+  Europäischen Mächtekonzerts im Spannungsfeld zwischen
+  außenpolitischen Erfordernissen und innenpolitischen
+  Zwängen, persönlichen Überzeugungen und politischen
+  Kompromissen.
+keywords:
+  - TEI
+  - Digital Scholarly Edition
+  - History
+license: CC-BY-SA-4.0

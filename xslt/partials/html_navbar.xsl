@@ -17,21 +17,98 @@
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projekt</a>
-                                <ul class="dropdown-menu">
+                            <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="about.html">Über das Projekt</a>
+                                        <a class="dropdown-item" href="about.html">Home</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="imprint.html">Impressum</a>
                                     </li>
                                 </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="toc.html">Editionseinheiten</a>
-                            </li>
-
-                            <li class="nav-item dropdown disabled">
+                        	</li>
+                        <li class="dropdown" id="toc">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inhaltsverzeichnis</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../pages/show.html?document=Einleitung.xml&amp;directory=meta">Einleitung</a>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="../pages/toc.html?collection=editions">Dokumente</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                        <a href="../pages/toc.html?collection=editions&amp;filterstring=A">Kongress von Aachen 1818</a>
+                                    </li>
+                                <li>
+                                        <a href="../pages/toc.html?collection=editions&amp;filterstring=T">Kongress von Troppau/Opava 1820</a>
+                                    </li>
+                                <li>
+                                        <a href="../pages/toc.html?collection=editions&amp;filterstring=L">Kongress von Laibach/Ljubljana 1821</a>
+                                    </li>
+                                <li>
+                                        <a href="../pages/toc.html?collection=editions&amp;filterstring=V">Kongress von Verona 1822</a>
+                                    </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="../pages/toc.html?collection=meta">Bestandsbeschreibungen</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="../pages/show.html?document=BestandsbeschreibungAachen.xml&amp;directory=meta">Kongress von Aachen 1818</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/show.html?document=BestandsbeschreibungTroppau.xml&amp;directory=meta">Kongress von Troppau/Opava 1820</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/show.html?document=BestandsbeschreibungLaibach.xml&amp;directory=meta">Kongress von Laibach/Ljubljana 1821</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/show.html?document=BestandsbeschreibungVerona.xml&amp;directory=meta">Kongress von Verona 1822</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="../pages/regesten.html">Regesten</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="../pages/regesten.html?collection=editions&amp;filterstring=A">Kongress von Aachen 1818</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/regesten.html?collection=editions&amp;filterstring=T">Kongress von Troppau/Opava 1820</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/regesten.html?collection=editions&amp;filterstring=L">Kongress von Laibach/Ljubljana 1821</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/regesten.html?collection=editions&amp;filterstring=V">Kongress von Verona 1822</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="../pages/toc.html?collection=meta">Über die Edition</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="../pages/show.html?document=Einleitung.xml&amp;directory=meta">Einleitung</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/show.html?document=Einleitung_kurz.xml&amp;directory=meta">Kurzeinleitung</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/show.html?document=Editionsrichtlinien.xml&amp;directory=meta">Editionsrichtlinien</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/show.html?document=about.xml&amp;directory=meta">Zur technischen Umsetzung</a>
+                                        </li>
+                                        <li>
+                                            <a href="../pages/show.html?document=Danksagung.xml&amp;directory=meta">Danksagung</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../pages/index.html#mapped">Überblickskarte</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown disabled">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Register</a>
                                 <ul class="dropdown-menu">
                                     <li>
@@ -52,10 +129,11 @@
                             <li class="nav-item">
                                 <a title="Suche" class="nav-link" href="search.html">Suche</a>
                             </li>
-                        </ul>
-                    </div>
+                    </ul>
+                </div>
                 </div>
             </nav>
+            
         </header>
     </xsl:template>
 </xsl:stylesheet>

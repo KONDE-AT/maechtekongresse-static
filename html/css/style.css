@@ -1,0 +1,270 @@
+/* Application styles could go here */
+
+html{
+    height:100%;
+}
+.ed{
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif!important;
+    font-size:1.8rem;
+}
+
+.footnotes .ed{
+    font-size:1.5rem;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+.container::after{
+  content: "";
+  position: absolute;
+  top: 20rem;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index:-3;
+  background-image:url('../../resources/img/bgmap90.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+.begin::after{
+    background-image:none;
+}
+.header{
+    flex:0 0 auto;
+    background-color:#F8F8F8;
+    color:#ffffff;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+.phl{
+    position:fixed;
+    top:10%;
+    z-index:2;
+    left:0.5em;
+}
+
+.phr{
+    position:fixed;
+    top:10%;
+    z-index:2;
+    right:0.5em;
+}
+
+.widetable{
+/*    width: 160%;
+    margin: 0 -10em;*/
+    position:relative;
+    width: 90vw;
+            left: 45%;
+            right: 45%;
+            margin-left: -45vw;
+            margin-right: -45vw;
+    top:5%; 
+    z-index:99;
+}
+/* HOW DO I REMOVE ALL OTHER CLASSES FROM ONE CLASS?! */
+.hr {
+    font-size:smaller;
+    text-align:right;
+    display:block;
+    margin-top:3em;
+    margin-bottom:5em;
+    border-top:1px solid #ccc;
+    border-spacing:10px;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:12px;
+}
+
+.opener {
+    margin: 1rem auto 4rem;
+}
+
+.transl {
+    background:rgba(158,255,255,0.4);
+}
+.well,.panel {
+    opacity:0.92;
+}
+
+.main-content{
+    flex:1 0 auto;
+}
+
+span.data-hr, mark.data-hr, .mark, mark {
+    background-color: #ffff00 !important;
+}
+
+sup {
+    font-size:8pt;    
+}
+
+.ergaenzt{
+    color:#3333aa;
+    text-decoration:none;
+}
+
+.signed{
+    text-align:right; 
+    margin-right:3rem;
+    font-size:1.8rem;
+}
+.shortRdg {
+    color:#757575;    
+}
+.shortRdg:hover { position: relative; }
+.shortRdg:hover .fullRdg { display: block; text-decoration: none;color: black;width: 21em;border: 1px solid black;background: white;position: absolute;padding: 0.5em; left: inherit; }
+                
+td {border-left: 1px;}
+
+td.underline {border-bottom: 1px solid black !important;}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+    padding: 0; 
+}
+
+.fullRdg {display:none;}
+               .shortRdg:hover { position: relative; }
+               .shortRdg:hover .fullRdg {    display: block; 
+                    text-decoration: none;
+                    color: black;
+                    width: 50em;
+                    border: 1px solid black;
+                    background: white;
+                    position: absolute;
+                    padding: 0.5em; 
+                    left: inherit; }
+
+footer{
+    flex:0 0 auto;
+    background-color:#333; /*#F8F8F8*/
+    color:#ffffff;
+    font-size:13px;
+    padding:20px;
+    /* position: absolute;*/
+    left:0;
+    right:0;
+    width:100%;
+    margin-top:10px;
+}
+footer .poweredby { float: right; margin: 33px 10px 0 0;}
+footer .poweredby img { width: 120px; }
+
+h1,h2 {
+    font-family: Gill,GillSans,"Gill Sans",Trebuchet,"Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-weight:bold;
+}
+
+q {
+  quotes: "«" "»" "„" "“" "‚" "‘" "»" "«" "›" "‹";
+}
+
+.corr {
+    color: #23527c;
+}
+
+.corner-ribbon{
+  width:200px;
+  background:rgba(238,204,0,0.9);
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  z-index:99;
+}
+
+.corner-ribbon.sticky{
+  position: fixed;
+}
+
+.corner-ribbon.top-right{
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.corner-ribbon.bottom-left{
+  top: auto;
+  bottom: 25px;
+  left: -50px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+@media (min-width: 1024px) {
+    .container{
+        max-width: 860px;
+    }
+}
+ 

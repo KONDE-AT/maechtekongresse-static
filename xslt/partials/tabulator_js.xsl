@@ -8,6 +8,7 @@
         <link href="https://unpkg.com/tabulator-tables@5.5.0/dist/css/tabulator_bootstrap5.min.css" rel="stylesheet"></link>
         <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
         <script src="tabulator-js/config.js"></script>
+        <script src="tabulator-js/tabulatorfiltering.js"></script>
         <script>
             var table = new Tabulator("#myTable", config);
             //trigger download of data.csv file
@@ -24,6 +25,14 @@
             document.getElementById("download-html").addEventListener("click", function(){
             table.download("html", "data.html", {style:true});
             });
+        </script>
+        <script>
+            var filter = getParameterByName("filterstring");
+            if (filter) {
+                table.setFilter([
+                    { field: "Sigle", type: "starts", value: filter}
+                ]);
+            }
         </script>
     </xsl:template>
 </xsl:stylesheet>

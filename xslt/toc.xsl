@@ -38,9 +38,12 @@
                         <table class="table" id="myTable">
                             <thead>
                                 <tr>
-                                    <th scope="col" width="20" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
+                                    <th scope="col" style="width:20px;" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
+                                    <th scope="col" style="width:40px;" tabulator-headerFilter="input">Sigle</th>
                                     <th scope="col" tabulator-headerFilter="input">Titel</th>
-                                    <th scope="col" tabulator-headerFilter="input">Dateinname</th>
+                                    <th scope="col" tabulator-headerFilter="input">Weitere Dokumente</th>
+                                    <th scope="col" tabulator-headerFilter="input">Datum</th>
+                                    <th scope="col" tabulator-headerFilter="input">Dateiname</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,23 +54,23 @@
                                     </xsl:variable>
                                     <tr>
                                         <td>
-                                            <a>
-                                                <xsl:attribute name="href">
-                                                  <xsl:value-of
-                                                  select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"
-                                                  />
-                                                </xsl:attribute>
-                                                <i class="bi bi-link-45deg"/>
-                                            </a>
+                                            <a><xsl:attribute name="href"><xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/></xsl:attribute><i class="bi bi-link-45deg"/></a>
+                                        </td>
+                                        <td><xsl:value-of select="//tei:publicationStmt/tei:idno[1]//translate(text(),'_',' ')"/></td>
+                                        <td><xsl:value-of select=".//tei:titleStmt/tei:title[@type='main']/text()"/></td>
+                                        <td>
+                                            <ul><xsl:for-each select=".//tei:msDesc[position()>1]//tei:title">
+                                                <li><xsl:value-of select="./text()"/></li>
+                                            </xsl:for-each></ul>
                                         </td>
                                         <td>
-                                            <xsl:value-of
-                                                select=".//tei:titleStmt/tei:title[1]/text()"/>
+                                            <xsl:choose>
+                                                <xsl:when test=".//tei:msDesc[1]//tei:origin[1]/tei:date[1]/@when"><xsl:value-of select="//tei:msDesc[1]//tei:origin[1]/tei:date[1]/@when"/></xsl:when>
+                                                <xsl:when test="//tei:msDesc[1]//tei:origin[1]/tei:date[1]"><xsl:value-of select="//tei:msDesc[1]//tei:origin[1]/tei:date[1]"/></xsl:when>
+                                                <xsl:otherwise><xsl:value-of select="//tei:editionStmt/tei:edition/tei:date[1]/text()"/></xsl:otherwise>
+                                            </xsl:choose>
                                         </td>
-                                        <td>
-                                            <xsl:value-of select="tokenize($full_path, '/')[last()]"
-                                            />
-                                        </td>
+                                        <td><xsl:value-of select="tokenize($full_path, '/')[last()]"/></td>
                                     </tr>
                                 </xsl:for-each>
                             </tbody>

@@ -29,6 +29,8 @@ repository-code: 'https://github.com/KONDE-AT/maechtekongresse-static/'
 url: 'https://maechtekongresse.acdh.oeaw.ac.at'
 repository: 'https://github.com/KONDE-AT/maechtekongresse/'
 abstract: >-
+  Digitale Edition der Dokumente zu den Kongressen von Aachen (1818), Troppau (1820), Laibach (1821) und Verona (1822)
+
   Die Kongresse von Aachen (1818), Troppau (1820), Laibach
   (1821) und Verona (1822) sind Ausdruck und Ergebnis einer
   im Vergleich zum 18. Jahrhundert neuen Konzeption von
@@ -84,3 +86,5 @@ keywords:
   - Great Powers
   - History of diplomacy
 license: CC-BY-SA-4.0
+version: Initial data release
+date-released: '2021-03-09'

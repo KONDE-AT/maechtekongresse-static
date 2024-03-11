@@ -28,11 +28,15 @@
         </script>
         <script>
             var filter = getParameterByName("filterstring");
-            if (filter) {
+            //console.log("filter:" + filter)
+            table.on("tableBuilt", function(){
+               if (filter) {
+                //console.log("filtering:" + filter)
                 table.setFilter([
-                    { field: "Sigle", type: "starts", value: filter}
+                    { field: "sigle", type: "starts", value: filter }
                 ]);
-            }
+               }
+            });
         </script>
     </xsl:template>
 </xsl:stylesheet>

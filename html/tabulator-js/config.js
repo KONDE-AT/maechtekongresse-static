@@ -5,6 +5,14 @@ var config = {
     layout: "fitColumns",
     responsiveLayout: true,
     tooltips: true,
+    dataLoader: true
+};
+
+var configTOC = {
+    height: 800,
+    layout: "fitColumns",
+    responsiveLayout: true,
+    tooltips: true,
     dataLoader: true,
     columns: [
         {title:"#", field:"link", width:20},
@@ -14,4 +22,4 @@ var config = {
         {title:"Datum", field:"date"},
         {title:"Dateiname", field:"filename"},
     ]
-};
+}

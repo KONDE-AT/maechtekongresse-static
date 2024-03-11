@@ -18,7 +18,7 @@
 
 
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="'Inhaltsverzeichnis'"/>
+        <xsl:variable name="doc_title" select="'Inhalt'"/>
 
 
     
@@ -79,7 +79,9 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
-                <xsl:call-template name="tabulator_js"/>
+                <xsl:call-template name="tabulator_js">
+                    <xsl:with-param name="config" select="'configTOC'"/>
+                </xsl:call-template>
             </body>
         </html>
     </xsl:template>

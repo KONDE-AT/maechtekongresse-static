@@ -42,7 +42,7 @@
                             <h3 class="panel-title">Kongress von Aachen 1818</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-primary" type="button" href="toc.html?collection=editions&amp;filterstring=A"> Dokumente
+                            <a class="btn btn-primary" type="button" href="toc.html?filterstring=A"> Dokumente
                                     <!--<span class="badge">50</span>-->
                             </a>
                             <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=A">Regesten</a>
@@ -58,7 +58,7 @@
                             <h3 class="panel-title">Kongress von Troppau/Opava 1820</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-primary" type="button" href="toc.html?collection=editions&amp;filterstring=T"> Dokumente
+                            <a class="btn btn-primary" type="button" href="toc.html?filterstring=T"> Dokumente
 <!--                                    <span class="badge">8</span>-->
                             </a>
                             <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=T">Regesten</a>
@@ -76,7 +76,7 @@
                             <h3 class="panel-title">Kongress von Laibach/Ljubljana 1821</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-primary" type="button" href="toc.html?collection=editions&amp;filterstring=L"> Dokumente
+                            <a class="btn btn-primary" type="button" href="toc.html?filterstring=L"> Dokumente
 <!--                                    <span class="badge">16</span>-->
                             </a>
                             <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=L">Regesten</a>
@@ -92,7 +92,7 @@
                             <h3 class="panel-title">Kongress von Verona 1822</h3>
                         </div>
                         <div class="panel-body">
-                            <a class="btn btn-primary" type="button" href="toc.html?collection=editions&amp;filterstring=V"> Dokumente
+                            <a class="btn btn-primary" type="button" href="toc.html?filterstring=V"> Dokumente
 <!--                                    <span class="badge">39</span>-->
                             </a>
                             <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=V">Regesten</a>
@@ -106,7 +106,7 @@
         </div>
         <div class="panel panel-default panel-body">
             <div class="col-md-12 transl">
-            <p style="margin-top:2em">Die Kongresse von <a href="toc.html?collection=editions&amp;filterstring=A">Aachen (1818)</a>, <a href="toc.html?collection=editions&amp;filterstring=T">Troppau (1820)</a>, <a href="toc.html?collection=editions&amp;filterstring=L">Laibach (1821)</a> und <a href="toc.html?collection=editions&amp;filterstring=V">Verona (1822)</a> sind
+            <p style="margin-top:2em">Die Kongresse von <a href="toc.html?filterstring=A">Aachen (1818)</a>, <a href="toc.html?filterstring=T">Troppau (1820)</a>, <a href="toc.html?filterstring=L">Laibach (1821)</a> und <a href="toc.html?filterstring=V">Verona (1822)</a> sind
                 Ausdruck und Ergebnis einer im Vergleich zum 18. Jahrhundert neuen Konzeption von
                 Außenpolitik: An die Stelle von zwischenstaatlicher Rivalität und Machtpolitik trat
                 eine in diesem Ausmaß bisher nicht praktizierte zwischenstaatliche Kooperation. Die
@@ -196,28 +196,28 @@
 		<line class="st4" x1="337.2" y1="285" x2="337.2" y2="289.7"/>
 		<line class="st4" x1="334.7" y1="287.1" x2="339.5" y2="287.1"/>
 	</g>
-	<a xlink:href="../pages/toc.html?collection=editions&amp;filterstring=A" xlink:title="Verträge von Aachen">
+	<a xlink:href="toc.html?filterstring=A" xlink:title="Verträge von Aachen">
 		<g>
 			<line class="st5" x1="257.7" y1="201.8" x2="257.7" y2="206.5"/>
 			<line class="st5" x1="255.2" y1="203.9" x2="260" y2="203.9"/>
 			<circle class="st6" cx="257.7" cy="203.9" r="85"/>
 		</g>
 	</a>
-	<a xlink:href="../pages/toc.html?collection=editions&amp;filterstring=T" xlink:title="Verträge von Troppau">
+	<a xlink:href="toc.html?filterstring=T" xlink:title="Verträge von Troppau">
 		<g>
 			<line class="st5" x1="374.9" y1="228.2" x2="374.9" y2="232.9"/>
 			<line class="st5" x1="372.4" y1="230.3" x2="377.2" y2="230.3"/>
 			<circle class="st6" cx="374.9" cy="230.3" r="14"/>
 		</g>
 	</a>
-	<a xlink:href="../pages/toc.html?collection=editions&amp;filterstring=V" xlink:title="Verträge von Verona">
+	<a xlink:href="toc.html?filterstring=V" xlink:title="Verträge von Verona">
 		<g>
 			<line class="st5" x1="293.1" y1="293.1" x2="293.1" y2="297.9"/>
 			<line class="st5" x1="290.6" y1="295.2" x2="295.4" y2="295.2"/>
 			<circle class="st6" cx="293.1" cy="295.2" r="66"/>
 		</g>
 	</a>
-	<a xlink:href="../pages/toc.html?collection=editions&amp;filterstring=L" xlink:title="Verträge von Laibach">
+	<a xlink:href="toc.html?filterstring=L" xlink:title="Verträge von Laibach">
 		<g>
 			<line class="st5" x1="337.5" y1="284.8" x2="337.5" y2="289.5"/>
 			<line class="st5" x1="335" y1="286.9" x2="339.8" y2="286.9"/>

@@ -33,24 +33,24 @@
                                     <a href="../pages/show.html?document=Einleitung.xml&amp;directory=meta">Einleitung</a>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a href="../pages/toc.html?collection=editions">Dokumente</a>
+                                    <a href="toc.html?collection=editions">Dokumente</a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                        <a href="../pages/toc.html?collection=editions&amp;filterstring=A">Kongress von Aachen 1818</a>
+                                        <a href="toc.html?filterstring=A">Kongress von Aachen 1818</a>
                                     </li>
                                 <li>
-                                        <a href="../pages/toc.html?collection=editions&amp;filterstring=T">Kongress von Troppau/Opava 1820</a>
+                                        <a href="toc.html?filterstring=T">Kongress von Troppau/Opava 1820</a>
                                     </li>
                                 <li>
-                                        <a href="../pages/toc.html?collection=editions&amp;filterstring=L">Kongress von Laibach/Ljubljana 1821</a>
+                                        <a href="toc.html?filterstring=L">Kongress von Laibach/Ljubljana 1821</a>
                                     </li>
                                 <li>
-                                        <a href="../pages/toc.html?collection=editions&amp;filterstring=V">Kongress von Verona 1822</a>
+                                        <a href="toc.html?filterstring=V">Kongress von Verona 1822</a>
                                     </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a href="../pages/toc.html?collection=meta">Bestandsbeschreibungen</a>
+                                    <a href="toc.html?collection=meta">Bestandsbeschreibungen</a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <a href="../pages/show.html?document=BestandsbeschreibungAachen.xml&amp;directory=meta">Kongress von Aachen 1818</a>
@@ -84,7 +84,7 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a href="../pages/toc.html?collection=meta">Über die Edition</a>
+                                    <a href="toc.html?collection=meta">Über die Edition</a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <a href="../pages/show.html?document=Einleitung.xml&amp;directory=meta">Einleitung</a>

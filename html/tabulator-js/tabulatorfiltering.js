@@ -22,3 +22,7 @@ function matchAny(data, filterParams){
     return match;
 }
 
+function htmlWrapFormatter(cell, formatterParams, onRendered){
+	cell.getElement().style.whiteSpace = "initial";
+	return this.emptyToSpace(cell.getValue());
+}

@@ -23,37 +23,36 @@
                                 </ul>
                         	</li>
                             <li class="nav-item dropdown disabled">
-                                <a class="nav-link dropdown-toggle" href="toc.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inhaltsverzeichnis</a>
+                                <a class="nav-link dropdown-toggle" href="toc.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inhalt</a>
                                 <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="Einleitung.html">Einleitung</a></li>
-                                <li><hr class="dropdown-divider"/></li>
-                                <li><a class="dropdown-item" href="toc.html?filterstring=A">Dokumente: Kongress von Aachen 1818</a></li>
-                                <li><a class="dropdown-item" href="toc.html?filterstring=T">Dokumente: Kongress von Troppau/Opava 1820</a></li>
-                                <li><a class="dropdown-item" href="toc.html?filterstring=L">Dokumente: Kongress von Laibach/Ljubljana 1821</a></li>
-                                <li><a class="dropdown-item" href="toc.html?filterstring=V">Dokumente: Kongress von Verona 1822</a></li>
-                                <li><hr class="dropdown-divider"/></li>
-                                <li><a class="dropdown-item" href="BestandsbeschreibungAachen.html">Bestandsbeschreibung Kongress von Aachen 1818</a></li>
-                                <li><a class="dropdown-item" href="BestandsbeschreibungTroppau.html">Bestandsbeschreibung Kongress von Troppau/Opava 1820</a></li>
-                                <li><a class="dropdown-item" href="BestandsbeschreibungLaibach.html">Bestandsbeschreibung Kongress von Laibach/Ljubljana 1821</a></li>
-                                <li><a class="dropdown-item" href="BestandsbeschreibungVerona.html">Bestandsbeschreibung Kongress von Verona 1822</a></li>
-                                <li><hr class="dropdown-divider"/></li>
-                                <!--
-                                <li class="submenu dropdown-menu">
-                                    <a href="../pages/regesten.html">Regesten »</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="../pages/regesten.html?collection=editions&amp;filterstring=A">Kongress von Aachen 1818</a></li>
-                                        <li><a class="dropdown-item" href="../pages/regesten.html?collection=editions&amp;filterstring=T">Kongress von Troppau/Opava 1820</a></li>
-                                        <li><a class="dropdown-item" href="../pages/regesten.html?collection=editions&amp;filterstring=L">Kongress von Laibach/Ljubljana 1821</a></li>
-                                        <li><a class="dropdown-item" href="../pages/regesten.html?collection=editions&amp;filterstring=V">Kongress von Verona 1822</a></li>
-                                    </ul>
-                                </li>-->
+                                    <li><a class="dropdown-item" href="toc.html">Inhaltsverzeichnis</a></li>
+                                    <li><hr class="dropdown-divider"/></li>
+                                    <li><a class="dropdown-item" href="Einleitung.html">Einleitung</a></li>
+                                    <li><hr class="dropdown-divider"/></li>
+                                    <li><a class="dropdown-item" href="#">Dokumente</a></li>
+                                    <li><a class="dropdown-item" href="toc.html?filterstring=A">Dokumente: Kongress von Aachen 1818</a></li>
+                                    <li><a class="dropdown-item" href="toc.html?filterstring=T">Dokumente: Kongress von Troppau/Opava 1820</a></li>
+                                    <li><a class="dropdown-item" href="toc.html?filterstring=L">Dokumente: Kongress von Laibach/Ljubljana 1821</a></li>
+                                    <li><a class="dropdown-item" href="toc.html?filterstring=V">Dokumente: Kongress von Verona 1822</a></li>
+                                    <li><hr class="dropdown-divider"/></li>
+                                    <li><a class="dropdown-item" href="#">Bestandsbeschreibungen</a></li>
+                                    <li><a class="dropdown-item" href="BestandsbeschreibungAachen.html">Bestandsbeschreibung Kongress von Aachen 1818</a></li>
+                                    <li><a class="dropdown-item" href="BestandsbeschreibungTroppau.html">Bestandsbeschreibung Kongress von Troppau/Opava 1820</a></li>
+                                    <li><a class="dropdown-item" href="BestandsbeschreibungLaibach.html">Bestandsbeschreibung Kongress von Laibach/Ljubljana 1821</a></li>
+                                    <li><a class="dropdown-item" href="BestandsbeschreibungVerona.html">Bestandsbeschreibung Kongress von Verona 1822</a></li>
+                                    <li><hr class="dropdown-divider"/></li>
+                                    <li class="dropdown-item"><a href="regesten.html">Regesten</a></li>
+                                    <li><a class="dropdown-item" href="regesten.html?filterstring=A">Regesten Kongress von Aachen 1818</a></li>
+                                    <li><a class="dropdown-item" href="regesten.html?filterstring=T">Regesten Kongress von Troppau/Opava 1820</a></li>
+                                    <li><a class="dropdown-item" href="regesten.html?filterstring=L">Regesten Kongress von Laibach/Ljubljana 1821</a></li>
+                                    <li><a class="dropdown-item" href="regesten.html?filterstring=V">Regesten Kongress von Verona 1822</a></li>
+                                    <li><hr class="dropdown-divider"/></li>
+                                    <li><a class="dropdown-item" href="#">Paratexte</a></li>
                                         <!-- <li><a class="dropdown-item" href="Einleitung.html">Einleitung</a></li> -->
                                         <li><a class="dropdown-item" href="Einleitung_kurz.html">Kurzeinleitung</a></li>
                                         <li><a class="dropdown-item" href="Editionsrichtlinien.html">Editionsrichtlinien</a></li>
                                         <li><a class="dropdown-item" href="about.html">Zur technischen Umsetzung</a></li>
                                         <li><a class="dropdown-item" href="Danksagung.html">Danksagung</a></li>
-                                    
-                                
                             </ul>
                         </li>
                         <li class="nav-item dropdown disabled">

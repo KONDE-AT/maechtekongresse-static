@@ -34,14 +34,14 @@
             <xsl:call-template name="nav_bar"/>
                 <main>
                     <div class="container">
-                        <h1>Inhaltsverzeichnis</h1>
+                        <h1>Regesten</h1>
                         <table class="table" id="myTable">
                             <thead>
                                 <tr>
                                     <th scope="col" style="width:20px;" tabulator-formatter="html" tabulator-headerSort="false" tabulator-download="false">#</th>
                                     <th scope="col" style="width:40px;" tabulator-headerFilter="input">Sigle</th>
                                     <th scope="col" tabulator-headerFilter="input">Titel</th>
-                                    <th scope="col" tabulator-headerFilter="input">Weitere Dokumente</th>
+                                    <th scope="col" tabulator-headerFilter="input">Regest</th>
                                     <th scope="col" tabulator-headerFilter="input">Datum</th>
                                     <th scope="col" tabulator-headerFilter="input">Dateiname</th>
                                 </tr>
@@ -58,7 +58,7 @@
                                         </td>
                                         <td><xsl:value-of select="//tei:publicationStmt/tei:idno[1]//translate(text(),'_',' ')"/></td>
                                         <td><xsl:value-of select=".//tei:titleStmt/tei:title[@type='main']/text()"/></td>
-                                        <td><xsl:for-each select=".//tei:msDesc[position()>1]//tei:title">– <xsl:value-of select="./normalize-space()"/><xsl:text>&#10;</xsl:text></xsl:for-each></td>
+                                        <td><xsl:for-each select=".//tei:abstract">– <xsl:value-of select="normalize-space(string-join(.//text(), ' '))"/><xsl:text>&#10;</xsl:text></xsl:for-each></td>
                                         <td>
                                             <xsl:choose>
                                                 <xsl:when test=".//tei:msDesc[1]//tei:origin[1]/tei:date[1]/@when"><xsl:value-of select="//tei:msDesc[1]//tei:origin[1]/tei:date[1]/@when"/></xsl:when>
@@ -76,7 +76,7 @@
                 </main>
                 <xsl:call-template name="html_footer"/>
                 <xsl:call-template name="tabulator_js">
-                    <xsl:with-param name="config" select="'configTOC'"/>
+                    <xsl:with-param name="config" select="'configRegest'"/>
                 </xsl:call-template>
             </body>
         </html>

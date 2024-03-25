@@ -48,7 +48,7 @@
                             <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=A">Regesten</a>
                         </div>
                         <div class="panel-footer">
-                            <a href="show.html?document=BestandsbeschreibungAachen.xml&amp;directory=meta">Bestandsbeschreibung</a>
+                            <a href="BestandsbeschreibungAachen.html">Bestandsbeschreibung</a>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                             <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=T">Regesten</a>
                         </div>
                         <div class="panel-footer">
-                            <a href="show.html?document=BestandsbeschreibungTroppau.xml&amp;directory=meta">Bestandsbeschreibung</a>
+                            <a href="BestandsbeschreibungTroppau.html">Bestandsbeschreibung</a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                             <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=L">Regesten</a>
                         </div>
                         <div class="panel-footer">
-                            <a href="show.html?document=BestandsbeschreibungLaibach.xml&amp;directory=meta">Bestandsbeschreibung</a>
+                            <a href="BestandsbeschreibungLaibach.html">Bestandsbeschreibung</a>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=V">Regesten</a>
                         </div>
                         <div class="panel-footer">
-                            <a href="show.html?document=BestandsbeschreibungVerona.xml&amp;directory=meta">Bestandsbeschreibung</a>
+                            <a href="BestandsbeschreibungVerona.html">Bestandsbeschreibung</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                 Überzeugungen und politischen Kompromissen.</p>
             <p style="text-align:right;margin-top:2em;">Karin Schneider, im September 2018</p>
                 <p>
-                    <a href="show.html?document=about.xml&amp;directory=meta&amp;stylesheet=meta#contacts">Kontakt</a>
+                    <a href="about.html#contacts">Kontakt</a>
                 </p>
             </div>
         </div>

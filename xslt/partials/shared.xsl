@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:local="http://dse-static.foo.bar" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="tei" version="2.0">
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:functx="http://www.functx.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:local="http://dse-static.foo.bar" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="tei" version="2.0">
     <xsl:output indent="no"/>
 <!--    <xsl:strip-space elements="note"/>-->
 <xsl:function name="local:makeId" as="xs:string">
@@ -8,6 +8,23 @@
             <xsl:value-of select="count($currentNode//preceding-sibling::*) + 1"/>
         </xsl:variable>
         <xsl:value-of select="concat(name($currentNode), '__', $nodeCurrNr)"/>
+    </xsl:function>
+    
+    <xsl:function name="functx:substring-after-if-contains" as="xs:string?" xmlns:functx="http://www.functx.com">
+        <xsl:param name="arg" as="xs:string?"/>
+        <xsl:param name="delim" as="xs:string"/>
+        <xsl:sequence select="if (contains($arg,$delim)) then substring-after($arg,$delim) else $arg"/>
+    </xsl:function>
+    
+    <xsl:function name="functx:substring-after-last" as="xs:string" xmlns:functx="http://www.functx.com">
+        <xsl:param name="arg" as="xs:string?"/>
+        <xsl:param name="delim" as="xs:string"/>
+        <xsl:sequence select="replace ($arg,concat('^.*',functx:escape-for-regex($delim)),'')"/>
+    </xsl:function>
+    
+    <xsl:function name="functx:escape-for-regex" as="xs:string" xmlns:functx="http://www.functx.com">
+        <xsl:param name="arg" as="xs:string?"/>
+        <xsl:sequence select="replace($arg, '(\.|\[|\]|\\|\||\-|\^|\$|\?|\*|\+|\{|\}|\(|\))','\\$1')"/>
     </xsl:function>
 
     <xsl:template match="tei:term">
@@ -107,7 +124,7 @@
             <xsl:when test="@target[contains(.,'.xml')]">
                 <xsl:element name="a">
                     <xsl:attribute name="href">
-                       show.html?ref=<xsl:value-of select="tokenize(./@target, '/')[4]"/>
+                        <xsl:value-of select="replace(functx:substring-after-last(@target, '/'), '.xml', '.html')"/>
                     </xsl:attribute>
                     <xsl:value-of select="."/>
                 </xsl:element>
@@ -173,7 +190,40 @@
         </strong>
     </xsl:template>
     
-    <xsl:template match="tei:rs[@ref or @key]">
+    <xsl:template match="tei:rs | tei:placeName | tei:persName | tei:orgName">
+        <xsl:variable name="entityType">
+            <xsl:choose>
+                <xsl:when test="contains(data(@ref), 'multi-person') or ./@type='multi-person'">multi-person</xsl:when>
+                <xsl:when test="contains(data(@ref), 'person') or ./@type='person'">person</xsl:when>
+                <xsl:when test="name()='persName'">person</xsl:when>
+                <xsl:when test="contains(data(@ref), 'multi-place') or ./@type='multi-place'">multi-place</xsl:when>
+                <xsl:when test="contains(data(@ref), 'place') or ./@type='place'">place</xsl:when>
+                <xsl:when test="name()='placeName'">place</xsl:when>
+                <xsl:when test="contains(data(@ref), 'multi-org') or ./@type='multi-org'">multi-org</xsl:when>
+                <xsl:when test="contains(data(@ref), 'org') or ./@type='org'">org</xsl:when>
+                <xsl:when test="name()='orgName'">org</xsl:when>
+                <xsl:when test="contains(data(@ref), 'multi-treaties') or ./@type='multi-treaties'">multi-treaties</xsl:when>
+                <xsl:when test="contains(data(@ref), 'treaties') or ./@type='treaties'">treaties</xsl:when>
+            </xsl:choose>
+        </xsl:variable>
+        <strong><span>
+            <xsl:attribute name="class">
+                <xsl:value-of select="concat('entity entity-', $entityType)"/>
+            </xsl:attribute>
+            <xsl:element name="a">
+                <xsl:attribute name="data-bs-toggle">modal</xsl:attribute>
+                <xsl:attribute name="data-bs-target">
+                    <xsl:value-of select="data(@ref)"/>
+                    <!-- <xsl:value-of select="concat('#', @key)"/> -->
+                </xsl:attribute>
+                <xsl:apply-templates/>
+            </xsl:element>
+        </span></strong>
+        <xsl:choose>
+            <xsl:when test="./following-sibling::text()[1][not(starts-with(., ','))]"><xsl:text> </xsl:text></xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    <!--<xsl:template match="tei:rs[@ref or @key]">
         <xsl:choose>
             <xsl:when test="data(./@type) eq 'multi-person'">
                 <span>
@@ -266,7 +316,7 @@
                 <xsl:apply-templates/>
             </xsl:element>
         </span>
-    </xsl:template>
+    </xsl:template>-->
     <xsl:template match="tei:region[@key] | tei:country[@key] | tei:region[@ref] | tei:country[@ref]">
         <span>
             <xsl:element name="a">

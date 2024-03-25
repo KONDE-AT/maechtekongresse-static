@@ -218,6 +218,10 @@ q {
     color: #23527c;
 }
 
+.hidden {
+    display: none;
+}
+
 .corner-ribbon{
   width:200px;
   background:rgba(238,204,0,0.9);

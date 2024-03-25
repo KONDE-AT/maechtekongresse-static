@@ -25,10 +25,10 @@ body{
   width: 100%;
   height: 100%;
   z-index:-3;
-  background-image:url('../../resources/img/bgmap90.svg');
+  /* background-image:url('../images/bgmap90.svg');
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: 0.4; */
 }
 .begin::after{
     background-image:none;

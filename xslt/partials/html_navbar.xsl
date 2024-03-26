@@ -18,7 +18,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projekt</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="about.html">Home</a></li>
+                                    <li><a class="dropdown-item" href="index.html">Home</a></li>
                                     <li><a class="dropdown-item" href="imprint.html">Impressum</a></li>
                                 </ul>
                         	</li>
@@ -61,6 +61,10 @@
                                     <li><a class="dropdown-item" href="listperson.html">Personen</a></li>
                                     <li><a class="dropdown-item" href="listplace.html">Orte</a></li>
                                     <li><a class="dropdown-item" href="listorg.html">Organisationen</a></li>
+                                    <li><hr class="dropdown-divider"/></li>
+                                    <li><a class="dropdown-item" href="listwit.html">Verwendete gedruckte Quellen</a></li>
+                                    <li><a class="dropdown-item" href="listtreaties.html">Liste der erwähnten Verträge</a></li>
+                                    <li><a class="dropdown-item" href="listbibl.html">Gesamtbibliografie</a></li>
                                 </ul>
                         </li>
                         <li class="nav-item">

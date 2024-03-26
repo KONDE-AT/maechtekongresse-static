@@ -126,6 +126,7 @@
                             <xsl:apply-templates/>
                         </div>
                     </xsl:for-each>
+                    <div id="loadModal"/>
                 </main>
                 <xsl:call-template name="html_footer"/>
                 <script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script>

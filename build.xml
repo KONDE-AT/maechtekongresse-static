@@ -47,7 +47,15 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    <xslt basedir="./data/editions" destdir="${target}" includes="*.xml" out="${target}/listbibl.html" style="./xslt/listbibl.xsl">
+    <xslt in="./data/indices/listtreaties.xml" includes="*.xml" out="${target}/listtreaties.html" style="./xslt/listbibl.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    <xslt in="./data/indices/listwit.xml" includes="*.xml" out="${target}/listwit.html" style="./xslt/listbibl.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    <xslt in="./data/meta/Literatur.xml" includes="*.xml" out="${target}/listbibl.html" style="./xslt/listbibl.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>

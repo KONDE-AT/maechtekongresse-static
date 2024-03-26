@@ -88,36 +88,9 @@
     </xsl:template>
 
     <xsl:template match="tei:div">
-        <xsl:choose>
-            <xsl:when test="@type='regest'">
-                <div>
-                    <xsl:attribute name="class">
-                        <text>regest</text>
-                    </xsl:attribute>
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when>
-            <!-- transcript -->
-            <xsl:when test="@type='transcript'">
-                <div>
-                    <xsl:attribute name="class">
-                        <text>transcript</text>
-                    </xsl:attribute>
-                    <xsl:apply-templates/>
-                </div>
-            </xsl:when><!-- Anlagen/Beilagen  -->
-            <xsl:when test="@xml:id">
-                <xsl:element name="div">
-                    <xsl:attribute name="id">
-                        <xsl:value-of select="@xml:id"/>
-                    </xsl:attribute>
-                    <xsl:apply-templates/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <div id="{@xml:id}">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template><!-- Verweise auf andere Dokumente   -->
     <xsl:template match="tei:ref">
         <xsl:choose>
@@ -423,38 +396,9 @@
         </xsl:element>
     </xsl:template><!-- Überschriften -->
     <xsl:template match="tei:head">
-        <xsl:element name="div">
-                <xsl:attribute name="style">margin-bottom:1.8em;</xsl:attribute>
-        <xsl:if test="@xml:id[starts-with(.,'org') or starts-with(.,'ue')]">
-            <a>
-                <xsl:attribute name="name">
-                    <xsl:value-of select="@xml:id"/>
-                </xsl:attribute>
-                <xsl:text> </xsl:text>
-            </a>
-        </xsl:if>
-        <a>
-            <xsl:attribute name="name">
-                <xsl:text>hd</xsl:text>
-                <xsl:number level="any"/>
-            </xsl:attribute>
-            <xsl:text> </xsl:text>
-        </a>
-        <xsl:choose>
-            <xsl:when test="./@type='sub'">
-                <h4>
-                    <xsl:apply-templates/>
-                </h4>
-            </xsl:when>
-            <xsl:otherwise>
         <h3>
-            <div>
-                <xsl:apply-templates/>
-            </div>
+            <xsl:apply-templates/>
         </h3>
-            </xsl:otherwise>
-        </xsl:choose>
-        </xsl:element>
     </xsl:template><!--  Quotes / Zitate -->
     <xsl:template match="tei:q">
         <xsl:element name="i">

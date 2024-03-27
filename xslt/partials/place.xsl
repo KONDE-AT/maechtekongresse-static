@@ -73,6 +73,18 @@
                     </td>
                 </tr>
                 </xsl:if>
+                <xsl:if test="./tei:idno[@type='URI'][contains(./text(),'geonames')]">
+                    <tr>
+                        <th>
+                            Geonames ID
+                        </th>
+                        <td>
+                            <a href="{./tei:idno[@type='URI']}" target="_blank">
+                                <xsl:value-of select="./tei:idno[@type='URI']"/>
+                            </a>
+                        </td>
+                    </tr>
+                </xsl:if>
                 <xsl:if test="./tei:idno[@type='WIKIDATA']">
                 <tr>
                     <th>

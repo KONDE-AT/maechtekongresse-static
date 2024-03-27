@@ -394,11 +394,11 @@
         </xsl:choose>
     </xsl:template>
     <!-- Bücher -->
-    <xsl:template match="tei:bibl">
+    <!--<xsl:template match="tei:bibl">
         <xsl:element name="span">
             <xsl:apply-templates/>
         </xsl:element>
-    </xsl:template><!-- Seitenzahlen -->
+    </xsl:template>--><!-- Seitenzahlen -->
     <xsl:template match="tei:pb">
         <xsl:choose>        
             <xsl:when test="ancestor::tei:table">

@@ -22,7 +22,7 @@
             <xsl:value-of select="concat(data(@xml:id), '.html')"/>
         </xsl:variable>
         <xsl:variable name="label">
-            <xsl:value-of select="./tei:persName[1]/text()"/>
+            <xsl:value-of select="./tei:persName[1]//text()"/>
         </xsl:variable>
         <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{$label}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">

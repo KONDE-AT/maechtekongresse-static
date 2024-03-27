@@ -153,6 +153,7 @@
     <xsl:template match="tei:rs | tei:placeName | tei:persName | tei:orgName | tei:origPlace | tei:region | tei:country">
         <xsl:variable name="entityType">
             <xsl:choose>
+                <xsl:when test="@xml:id and not(@ref)">none</xsl:when>
                 <xsl:when test="contains(data(@ref), 'multi-person') or ./@type='multi-person'">multi-person</xsl:when>
                 <xsl:when test="contains(data(@ref), 'person') or ./@type='person'">person</xsl:when>
                 <xsl:when test="name()='persName'">person</xsl:when>
@@ -169,19 +170,24 @@
                 <xsl:when test="contains(data(@ref), 'treaties') or ./@type='treaties'">treaties</xsl:when>
             </xsl:choose>
         </xsl:variable>
-        <strong><span>
-            <xsl:attribute name="class">
-                <xsl:value-of select="concat('entity entity-', $entityType)"/>
-            </xsl:attribute>
-            <xsl:element name="a">
-                <xsl:attribute name="data-bs-toggle">modal</xsl:attribute>
-                <xsl:attribute name="data-bs-target">
-                    <xsl:value-of select="data(@ref)"/>
-                    <!-- <xsl:value-of select="concat('#', @key)"/> -->
-                </xsl:attribute>
-                <xsl:apply-templates/>
-            </xsl:element>
-        </span></strong>
+        <xsl:choose>
+            <xsl:when test="$entityType eq 'none'"><xsl:apply-templates/></xsl:when><!-- these are preceding tei:note elements -->
+            <xsl:otherwise>
+                <strong><span>
+                    <xsl:attribute name="class">
+                        <xsl:value-of select="concat('entity entity-', $entityType)"/>
+                    </xsl:attribute>
+                    <xsl:element name="a">
+                        <xsl:attribute name="data-bs-toggle">modal</xsl:attribute>
+                        <xsl:attribute name="data-bs-target">
+                            <xsl:value-of select="data(@ref)"/>
+                            <!-- <xsl:value-of select="concat('#', @key)"/> -->
+                        </xsl:attribute>
+                        <xsl:apply-templates/>
+                    </xsl:element>
+                </span></strong>
+            </xsl:otherwise>
+        </xsl:choose>
         <xsl:choose>
             <xsl:when test="./following-sibling::text()[1][not(starts-with(., ','))]"><xsl:text> </xsl:text></xsl:when>
         </xsl:choose>

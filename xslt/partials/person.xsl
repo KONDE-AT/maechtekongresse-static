@@ -7,23 +7,25 @@
     <xsl:template match="tei:person" name="person_detail">
         <table class="table entity-table">
             <tbody>
-                <xsl:if test="./tei:birth/tei:date">
+                <xsl:if test="./tei:birth/tei:date or ./tei:birth/text()">
                 <tr>
                     <th>
                         Geburtsdatum
                     </th>
                     <td>
                         <xsl:value-of select="./tei:birth/tei:date"/>
+                        <xsl:value-of select="./tei:birth/text()"/>
                     </td>
                 </tr>
                 </xsl:if>
-                <xsl:if test="./tei:death/tei:date">
+                <xsl:if test="./tei:death/tei:date or ./tei:death/text()">
                 <tr>
                     <th>
                         Sterbedatum
                     </th>
                     <td>
                         <xsl:value-of select="./tei:death/tei:date"/>
+                        <xsl:value-of select="./tei:death/text()"/>
                     </td>
                 </tr>
                 </xsl:if>
@@ -34,7 +36,19 @@
                         </th>
                         <td>
                             <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                <xsl:value-of select="./tei:idno[@type='GND']"/>
+                            </a>
+                        </td>
+                    </tr>
+                </xsl:if>
+                <xsl:if test="./tei:idno[@type='URI'][contains(text(),'viaf')]">
+                    <tr>
+                        <th>
+                            VIAF ID
+                        </th>
+                        <td>
+                            <a href="{./tei:idno[@type='URI']}" target="_blank">
+                                <xsl:value-of select="./tei:idno[@type='URI']"/>
                             </a>
                         </td>
                     </tr>
@@ -80,6 +94,16 @@
                         </ul>
                     </td>
                 </tr>
+                </xsl:if>
+                <xsl:if test="./tei:note/text()">
+                    <tr>
+                        <th>
+                            Anmerkung
+                        </th>
+                        <td>
+                            <xsl:apply-templates select="./tei:note"/>
+                        </td>
+                    </tr>
                 </xsl:if>
             </tbody>
         </table>

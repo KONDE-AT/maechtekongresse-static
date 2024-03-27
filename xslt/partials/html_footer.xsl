@@ -24,7 +24,7 @@
                             <a href="https://www.fwf.ac.at/de/" class="navlink" target="_blank">
                                 <img src="images/fwf-logo_vektor_var2-01.svg" alt="FWF" width="85%"/>
                             </a><br/>
-                            <a href="https://pf.fwf.ac.at/de/wissenschaft-konkret/project-finder?search%5Bproject_number%5D=P+28448" target="_blank" style="display:block;align:left;margin-top:3px">P-28448</a>
+                            <a href="https://www.fwf.ac.at/forschungsradar/10.55776/P28448" target="_blank" style="display:block;align:left;margin-top:3px">P-28448</a>
                         </div>
                         <div class="col-lg-1 col-md-2 col-sm-2 col-xs-6 col-3">
                             <a href="imprint.html" class="navlink text-right" target="_blank">

@@ -37,33 +37,33 @@
         <div style="text-align:center">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="panel panel-default transl">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Kongress von Aachen 1818</h3>
+                    <div class="card card-default transl">
+                        <div class="card-heading">
+                            <h3 class="card-title">Kongress von Aachen <br/>1818</h3>
                         </div>
-                        <div class="panel-body">
-                            <a class="btn btn-primary" type="button" href="toc.html?filterstring=A"> Dokumente
+                        <div class="card-body">
+                            <a class="btn btn-primary m-1" type="button" href="toc.html?filterstring=A"> Dokumente
                                     <!--<span class="badge">50</span>-->
                             </a>
-                            <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=A">Regesten</a>
+                            <a class="btn btn-primary m-1" type="button" href="regesten.html??collection=editions&amp;filterstring=A">Regesten</a>
                         </div>
-                        <div class="panel-footer">
+                        <div class="card-footer">
                             <a href="BestandsbeschreibungAachen.html">Bestandsbeschreibung</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="panel panel-default transl">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Kongress von Troppau/Opava 1820</h3>
+                    <div class="card card-default transl">
+                        <div class="card-heading">
+                            <h3 class="card-title">Kongress von Troppau/Opava <br/>1820</h3>
                         </div>
-                        <div class="panel-body">
-                            <a class="btn btn-primary" type="button" href="toc.html?filterstring=T"> Dokumente
+                        <div class="card-body">
+                            <a class="btn btn-primary m-1" type="button" href="toc.html?filterstring=T"> Dokumente
 <!--                                    <span class="badge">8</span>-->
                             </a>
-                            <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=T">Regesten</a>
+                            <a class="btn btn-primary m-1" type="button" href="regesten.html??collection=editions&amp;filterstring=T">Regesten</a>
                         </div>
-                        <div class="panel-footer">
+                        <div class="card-footer">
                             <a href="BestandsbeschreibungTroppau.html">Bestandsbeschreibung</a>
                         </div>
                     </div>
@@ -71,40 +71,40 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="panel panel-default transl">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Kongress von Laibach/Ljubljana 1821</h3>
+                    <div class="card card-default transl">
+                        <div class="card-heading">
+                            <h3 class="card-title">Kongress von Laibach/Ljubljana <br/>1821</h3>
                         </div>
-                        <div class="panel-body">
-                            <a class="btn btn-primary" type="button" href="toc.html?filterstring=L"> Dokumente
+                        <div class="card-body">
+                            <a class="btn btn-primary m-1" type="button" href="toc.html?filterstring=L"> Dokumente
 <!--                                    <span class="badge">16</span>-->
                             </a>
-                            <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=L">Regesten</a>
+                            <a class="btn btn-primary m-1" type="button" href="regesten.html??collection=editions&amp;filterstring=L">Regesten</a>
                         </div>
-                        <div class="panel-footer">
+                        <div class="card-footer">
                             <a href="BestandsbeschreibungLaibach.html">Bestandsbeschreibung</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="panel panel-default transl">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Kongress von Verona 1822</h3>
+                    <div class="card card-default transl">
+                        <div class="card-heading">
+                            <h3 class="card-title">Kongress von Verona <br/>1822</h3>
                         </div>
-                        <div class="panel-body">
-                            <a class="btn btn-primary" type="button" href="toc.html?filterstring=V"> Dokumente
+                        <div class="card-body">
+                            <a class="btn btn-primary m-1" type="button" href="toc.html?filterstring=V"> Dokumente
 <!--                                    <span class="badge">39</span>-->
                             </a>
-                            <a class="btn btn-primary" type="button" href="regesten.html??collection=editions&amp;filterstring=V">Regesten</a>
+                            <a class="btn btn-primary m-1" type="button" href="regesten.html??collection=editions&amp;filterstring=V">Regesten</a>
                         </div>
-                        <div class="panel-footer">
+                        <div class="card-footer">
                             <a href="BestandsbeschreibungVerona.html">Bestandsbeschreibung</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default panel-body">
+        <div class="card card-default card-body">
             <div class="col-md-12 transl">
             <p style="margin-top:2em">Die Kongresse von <a href="toc.html?filterstring=A">Aachen (1818)</a>, <a href="toc.html?filterstring=T">Troppau (1820)</a>, <a href="toc.html?filterstring=L">Laibach (1821)</a> und <a href="toc.html?filterstring=V">Verona (1822)</a> sind
                 Ausdruck und Ergebnis einer im Vergleich zum 18. Jahrhundert neuen Konzeption von
@@ -137,14 +137,14 @@
                 </p>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel col-md-12 panel-default">
-                <div class="panel panel-heading">
-                    <h3 class="panel-title" id="mapped">Orte und Anzahl (Radius) der Verträge auf einer <a href="https://www.ieg-maps.uni-mainz.de/mapsp/mappEu820Serie2.htm" title="Karte: (c) IEG/A. Kunz 2003, CC-BY-NC 4.0">Europakarte (Grenzen
+        <div class="card card-default">
+            <div class="card col-md-12 card-default">
+                <div class="card card-heading">
+                    <h3 class="card-title" id="mapped">Orte und Anzahl (Radius) der Verträge auf einer <a href="https://www.ieg-maps.uni-mainz.de/mapsp/mappEu820Serie2.htm" title="Karte: (c) IEG/A. Kunz 2003, CC-BY-NC 4.0">Europakarte (Grenzen
                         1820)</a>
                     </h3>
                 </div>
-                <div class="panel panel-body">
+                <div class="card card-body">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 654.1 552.3" style="enable-background:new 0 0 654.1 552.3;" xml:space="preserve" title="Karte: IEG/Kunz, Visualisierung: Stephan Kurz">
                         <title>Karte: IEG/Kunz, Visualisierung: Stephan Kurz</title>
 <style type="text/css">

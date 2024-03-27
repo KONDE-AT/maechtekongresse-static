@@ -135,19 +135,6 @@
             </xsl:element>
         </strong>
     </xsl:template>
-    <xsl:template match="tei:origPlace[@ref]">
-        <strong>
-            <xsl:element name="a">
-                <xsl:attribute name="class">reference</xsl:attribute>
-                <xsl:attribute name="data-type">listplace.xml</xsl:attribute>
-                <xsl:attribute name="data-key">
-                    <xsl:value-of select="substring-after(data(@ref), '#')"/>
-                    <xsl:value-of select="@key"/>
-                </xsl:attribute>
-                <xsl:value-of select="."/>
-            </xsl:element>
-        </strong>
-    </xsl:template>
     
     <xsl:template match="tei:author[@ref]">
         <strong>
@@ -163,7 +150,7 @@
         </strong>
     </xsl:template>
     
-    <xsl:template match="tei:rs | tei:placeName | tei:persName | tei:orgName">
+    <xsl:template match="tei:rs | tei:placeName | tei:persName | tei:orgName | tei:origPlace | tei:region | tei:country">
         <xsl:variable name="entityType">
             <xsl:choose>
                 <xsl:when test="contains(data(@ref), 'multi-person') or ./@type='multi-person'">multi-person</xsl:when>
@@ -172,6 +159,9 @@
                 <xsl:when test="contains(data(@ref), 'multi-place') or ./@type='multi-place'">multi-place</xsl:when>
                 <xsl:when test="contains(data(@ref), 'place') or ./@type='place'">place</xsl:when>
                 <xsl:when test="name()='placeName'">place</xsl:when>
+                <xsl:when test="name()='origPlace'">place</xsl:when>
+                <xsl:when test="name()='country'">place</xsl:when>
+                <xsl:when test="name()='region'">place</xsl:when>
                 <xsl:when test="contains(data(@ref), 'multi-org') or ./@type='multi-org'">multi-org</xsl:when>
                 <xsl:when test="contains(data(@ref), 'org') or ./@type='org'">org</xsl:when>
                 <xsl:when test="name()='orgName'">org</xsl:when>
@@ -290,24 +280,9 @@
             </xsl:element>
         </span>
     </xsl:template>-->
-    <xsl:template match="tei:region[@key] | tei:country[@key] | tei:region[@ref] | tei:country[@ref]">
-        <span>
-            <xsl:element name="a">
-                <xsl:attribute name="class">reference</xsl:attribute>
-                <xsl:attribute name="data-type">listplace.xml</xsl:attribute>
-                <xsl:attribute name="data-key">
-                    <xsl:value-of select="substring-after(data(@ref), '#')"/>
-                    <xsl:value-of select="substring-after(data(@key), '#')"/>
-                </xsl:attribute>
-                <xsl:apply-templates/>
-            </xsl:element>
-        </span>
-    </xsl:template>
+    
     <xsl:template match="tei:date">
         <xsl:element name="span">
-            <xsl:attribute name="style">
-<!--                <xsl:text>color:green;</xsl:text>-->
-            </xsl:attribute>
             <xsl:if test="@when">
                 <xsl:attribute name="title">ISO: <xsl:value-of select="@when"/>
                 </xsl:attribute>

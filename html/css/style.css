@@ -5,12 +5,9 @@ html{
 }
 .ed{
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif!important;
-    font-size:1.8rem;
+    
 }
 
-.footnotes .ed{
-    font-size:1.5rem;
-}
 
 body{
     display:flex;
@@ -157,7 +154,6 @@ sup {
 .signed{
     text-align:right; 
     margin-right:3rem;
-    font-size:1.8rem;
 }
 .shortRdg {
     color:#757575;    

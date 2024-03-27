@@ -55,6 +55,9 @@
                                         <li><a class="dropdown-item" href="Danksagung.html">Danksagung</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a title="Kalender" class="nav-link" href="calendar.html">Kalender</a>
+                        </li>
                         <li class="nav-item dropdown disabled">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Register</a>
                                 <ul class="dropdown-menu">

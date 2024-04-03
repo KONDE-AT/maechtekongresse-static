@@ -42,6 +42,7 @@ for x in tqdm(files, total=len(files)):
         continue
     document = {}  # initialising an empty dict for our document we want to index
     _, doc_id = os.path.split(x)  # generating the doc-id from the filename
+    doc_id = doc_id.replace(".xml", "")  # we don't want the .xml extensions
     document["id"] = doc_id
     document["title"] = doc.any_xpath(".//tei:title[@type='main']")[
         0

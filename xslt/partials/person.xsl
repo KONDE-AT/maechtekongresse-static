@@ -101,7 +101,7 @@
                             Anmerkung
                         </th>
                         <td>
-                            <xsl:apply-templates select="./tei:note"/>
+                            <xsl:apply-templates select="./tei:note/text()"/>
                         </td>
                     </tr>
                 </xsl:if>

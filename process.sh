@@ -5,7 +5,7 @@ add-attributes -g "./data/editions/*.xml" -b "https://id.acdh.oeaw.ac.at/maechte
 echo "denormalize indices"
 denormalize-indices -f "./data/editions/*.xml" -i "./data/indices/*.xml" -m ".//*[@ref]/@ref" -x ".//tei:title[@type='main']/text()"
 
-echo "remove notegrpoups from edition files"
+echo "remove notegroups from edition files"
 python rm_notegrp.py
 
 echo "building calendar"

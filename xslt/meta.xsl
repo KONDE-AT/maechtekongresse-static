@@ -34,22 +34,22 @@
                     <div class="container">                        
                         <h1><xsl:value-of select="$doc_title"/></h1>    
                         <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
-                        <xsl:if test=".//tei:note[not(./tei:p)]">
+                        <xsl:if test=".//tei:note[not(./tei:p)][ancestor::tei:body]">
                         <p style="text-align:center;">
-                            <xsl:for-each select=".//tei:note[not(./tei:p)]">
+                            <xsl:for-each select=".//tei:note[not(./tei:p)][ancestor::tei:body]">
                                 <div class="footnotes" id="{local:makeId(.)}">
                                     <xsl:element name="a">
                                         <xsl:attribute name="name">
                                             <xsl:text>fn</xsl:text>
-                                            <xsl:number level="any" format="1" count="tei:note"/>
+                                            <xsl:number level="any" format="1" count="tei:note[not(./tei:p)][ancestor::tei:body]"/>
                                         </xsl:attribute>
                                         <a>
                                             <xsl:attribute name="href">
                                                 <xsl:text>#fna_</xsl:text>
-                                                <xsl:number level="any" format="1" count="tei:note"/>
+                                                <xsl:number level="any" format="1" count="tei:note[not(./tei:p)][ancestor::tei:body]"/>
                                             </xsl:attribute>
                                             <span style="font-size:7pt;vertical-align:super; margin-right: 0.4em">
-                                                <xsl:number level="any" format="1" count="tei:note"/>
+                                                <xsl:number level="any" format="1" count="tei:note[not(./tei:p)][ancestor::tei:body]"/>
                                             </span>
                                         </a>
                                     </xsl:element>

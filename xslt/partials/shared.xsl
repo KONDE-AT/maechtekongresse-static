@@ -68,21 +68,21 @@
     </xsl:template>
     
     <!--    footnotes -->   
-    <xsl:template match="tei:note">
+    <xsl:template match="tei:note[not(./tei:p)][ancestor::tei:body]">
         <xsl:element name="a">
             <xsl:attribute name="name">
                 <xsl:text>fna_</xsl:text>
-                <xsl:number level="any" format="1" count="tei:note"/>
+                <xsl:number level="any" format="1" count="tei:note[not(./tei:p)][ancestor::tei:body]"/>
             </xsl:attribute>
             <xsl:attribute name="href">
                 <xsl:text>#fn</xsl:text>
-                <xsl:number level="any" format="1" count="tei:note"/>
+                <xsl:number level="any" format="1" count="tei:note[not(./tei:p)][ancestor::tei:body]"/>
             </xsl:attribute>
             <xsl:attribute name="title">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:attribute>
             <sup>
-                <xsl:number level="any" format="1" count="tei:note"/>
+                <xsl:number level="any" format="1" count="tei:note[not(./tei:p)][ancestor::tei:body]"/>
             </sup>
         </xsl:element>
     </xsl:template>

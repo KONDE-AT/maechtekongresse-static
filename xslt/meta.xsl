@@ -234,7 +234,7 @@
         </xsl:choose>
     </xsl:template>
     <!-- Bücher -->
-    <xsl:template match="tei:bibl">
+    <xsl:template match="tei:bibl[ancestor::tei:text]">
         <xsl:element name="strong">
             <xsl:apply-templates/>
         </xsl:element>

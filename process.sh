@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "remove netvis stuff"
-rm "./data/meta/netviz-config.xml"
+rm "./data/meta/netvis-config.xml"
 
 echo "add ids"
 add-attributes -g "./data/editions/*.xml" -b "https://id.acdh.oeaw.ac.at/maechtekongresse/editions"

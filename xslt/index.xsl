@@ -32,8 +32,8 @@
                 <main class="flex-shrink-0">
                     <div class="container">
                         <h1><xsl:value-of select="$project_title"/></h1>
-                        <p style="text-align:center; margin-bottom:1.5em">Digitale Edition der Dokumente zu den Kongressen von Aachen (1818), Troppau (1820), Laibach (1821) und Verona (1822)</p>
-                        <p style="text-align:center; margin-bottom:3em">Herausgegeben von Karin Schneider unter Mitarbeit von Stephan Kurz am <a href="https://www.oeaw.ac.at/ihb/">Institut für Neuzeit- und Zeitgeschichtsforschung</a> der <a href="https://www.oeaw.ac.at/">Österreichischen Akademie der Wissenschaften</a>.</p>
+                        <p style="margin-bottom:1.5em">Digitale Edition der Dokumente zu den Kongressen von Aachen (1818), Troppau (1820), Laibach (1821) und Verona (1822)</p>
+                        <p style="margin-bottom:3em">Herausgegeben von Karin Schneider unter Mitarbeit von Stephan Kurz am <a href="https://www.oeaw.ac.at/ihb/">Institut für Neuzeit- und Zeitgeschichtsforschung</a> der <a href="https://www.oeaw.ac.at/">Österreichischen Akademie der Wissenschaften</a>.</p>
         <div style="text-align:center">
             <div class="row">
                 <div class="col-md-6">

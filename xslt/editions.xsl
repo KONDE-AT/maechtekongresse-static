@@ -93,9 +93,76 @@
                                 <xsl:call-template name="annotation-options"></xsl:call-template>
                             </div>
                         </div>
-                        
+                        <div id="teiHeader">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <xsl:if test="//tei:abstract">
+                                        <xsl:choose>
+                                            <xsl:when test="count(//tei:abstract) &gt; 1">
+                                                <xsl:for-each select="//tei:abstract">
+                                                    <xsl:variable name="x">
+                                                        <xsl:number level="any" count="tei:abstract"/>
+                                                    </xsl:variable>
+                                                    <tr>
+                                                        <th>
+                                                            <abbr title="//tei:abstract">Regest
+                                                                <xsl:text> Nr. </xsl:text>
+                                                                    <xsl:value-of select="$x"/>
+                                                            </abbr>
+                                                        </th>
+                                                        <td>
+                                                            <em>
+                                                                <xsl:apply-templates select="//tei:abstract[position()=$x]"/>
+                                                            </em>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:for-each>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <tr>
+                                                    <th>
+                                                        <abbr title="//tei:abstract">Regest</abbr>
+                                                    </th>
+                                                    <td>
+                                                        <em>
+                                                            <xsl:apply-templates select="//tei:abstract"/>
+                                                        </em>
+                                                    </td>
+                                                </tr>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:if>
+                                    <xsl:if test="//tei:particDesc/tei:listPerson/tei:person">
+                                        <tr>
+                                            <th>
+                                                <abbr title="//tei:particDesc/tei:listPerson/tei:person">Anwesende</abbr>
+                                            </th>
+                                            <td>
+                                                <xsl:for-each select="//tei:particDesc/tei:listPerson/tei:person">
+                                                    <xsl:apply-templates/>
+                                                    <xsl:if test="position() != last()">
+                                                        <xsl:text> · </xsl:text>
+                                                    </xsl:if>
+                                                </xsl:for-each>
+                                            </td>
+                                        </tr>
+                                    </xsl:if>
+                                    <xsl:if test="//tei:supportDesc/tei:extent">
+                                        <tr>
+                                            <th>
+                                                <abbr title="//tei:supportDesc/tei:extent">Extent</abbr>
+                                            </th>
+                                            <td>
+                                                <xsl:apply-templates select="//tei:supportDesc/tei:extent"/>
+                                            </td>
+                                        </tr>
+                                    </xsl:if>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="body">
                             <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
-                        
+                        </div>
 
                         <p style="text-align:center;">
                             <xsl:for-each select=".//tei:note[not(./tei:p)][ancestor::tei:body]">

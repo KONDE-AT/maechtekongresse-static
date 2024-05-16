@@ -234,11 +234,11 @@
         </xsl:choose>
     </xsl:template>
     <!-- Bücher -->
-    <xsl:template match="tei:bibl[ancestor::tei:text]">
+    <!--<xsl:template match="tei:bibl[ancestor::tei:text]">
         <xsl:element name="strong">
             <xsl:apply-templates/>
         </xsl:element>
-    </xsl:template><!-- Seitenzahlen -->
+    </xsl:template>--><!-- Seitenzahlen -->
     <xsl:template match="tei:pb">
         <xsl:element name="div">
             <xsl:attribute name="style">

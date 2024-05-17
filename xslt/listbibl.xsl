@@ -94,7 +94,7 @@
                         <main>
                             <div class="container">
                                 <h1>Zeuge <xsl:value-of select="@xml:id"/></h1>
-                                <xsl:call-template name="bibl_detail"/>
+                                <xsl:call-template name="witness_detail"/>
                             </div>
                         </main>
                         <xsl:call-template name="html_footer"/>

@@ -276,9 +276,31 @@
                                 </div>
                                 </div>
                             </xsl:for-each>
-                        
                     </div>
                         <div id="body">
+                            <div class="panel panel-body">
+                                <xsl:if test="count(//tei:div) &gt; 1">
+                                    <h3 id="clickme">
+                                        <abbr title="Für Abschnitte klicken" style="color:#23527c">Abschnitte</abbr>
+                                    </h3>
+                                    <div id="headings" class="readmore">
+                                        <ul>
+                                            <xsl:for-each select="/tei:TEI/tei:text/tei:body//tei:div">
+                                                <xsl:variable name="msIdlink" select="@decls"/>
+                                                <xsl:variable name="msId" select="substring-after($msIdlink,'#')"/>
+                                                <li>
+                                                    <a>
+                                                        <xsl:attribute name="href">
+                                                            <xsl:value-of select="$msIdlink"/>
+                                                        </xsl:attribute>
+                                                        <xsl:value-of select="root()//tei:msDesc[@xml:id=$msId]//tei:title"/>
+                                                    </a>
+                                                </li>
+                                            </xsl:for-each>
+                                        </ul>
+                                    </div>
+                                </xsl:if>
+                            </div>
                             <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
                         </div>
 

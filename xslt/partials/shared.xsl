@@ -106,6 +106,7 @@
                 <xsl:element name="a">
                     <xsl:attribute name="href">
                         <xsl:value-of select="@target"/>
+                        <xsl:value-of select="@decls"/>
                     </xsl:attribute>
                     <xsl:apply-templates/>
                 </xsl:element>

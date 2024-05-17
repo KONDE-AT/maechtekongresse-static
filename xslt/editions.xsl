@@ -304,7 +304,7 @@
                             </div>
                             <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
                         </div>
-                        <div class="card card-default">
+                        <div class="card card-default mt-5 p-2">
                             <h4>Noten</h4>
                             <xsl:for-each select=".//tei:note[not(./tei:p)][ancestor::tei:body]">
                                 <div class="footnotes" id="{local:makeId(.)}">
@@ -451,7 +451,6 @@
         <xsl:choose>
             <xsl:when test="@decls">
                 <xsl:element name="div">
-                    <xsl:attribute name="class">card</xsl:attribute>
                     <xsl:attribute name="id">
                         <xsl:value-of select="$msId"/>
                     </xsl:attribute>

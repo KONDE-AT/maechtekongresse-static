@@ -503,7 +503,7 @@
         <xsl:for-each select=".//tei:bibl">
             <xsl:sort order="ascending"/>
             <li id="{./@xml:id}">
-                <xsl:apply-templates/>
+                <xsl:apply-templates select="node()[not(self::tei:noteGrp)]"/>
             </li>
         </xsl:for-each>
         </ul>

@@ -290,8 +290,7 @@
     <xsl:template match="tei:date">
         <xsl:element name="span">
             <xsl:if test="@when">
-                <xsl:attribute name="title">ISO: <xsl:value-of select="@when"/>
-                </xsl:attribute>
+                <xsl:attribute name="title">ISO: <xsl:value-of select="@when"/></xsl:attribute>
             </xsl:if>
             <xsl:apply-templates/>
         </xsl:element>

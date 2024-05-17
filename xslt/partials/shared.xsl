@@ -99,7 +99,7 @@
                     <xsl:attribute name="href">
                         <xsl:value-of select="replace(functx:substring-after-last(@target, '/'), '.xml', '.html')"/>
                     </xsl:attribute>
-                    <xsl:value-of select="."/>
+                    <xsl:apply-templates/>
                 </xsl:element>
             </xsl:when>
             <xsl:otherwise>
@@ -107,7 +107,7 @@
                     <xsl:attribute name="href">
                         <xsl:value-of select="@target"/>
                     </xsl:attribute>
-                    <xsl:value-of select="."/>
+                    <xsl:apply-templates/>
                 </xsl:element>
             </xsl:otherwise>
         </xsl:choose>

@@ -344,10 +344,56 @@
     </xsl:template>
 
     <xsl:template match="tei:div">
-        <div id="{local:makeId(.)}">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>  
+        <xsl:variable name="msId" select="substring-after(@decls, '#')"/>
+        <xsl:variable name="handId" select="substring-after(@hand, '#')"/>
+        <xsl:choose>
+            <xsl:when test="@decls">
+                <xsl:element name="div">
+                    <xsl:attribute name="class">well</xsl:attribute>
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="$msId"/>
+                    </xsl:attribute>
+                    <xsl:if test="root()//tei:handNote[@xml:id=$handId]">
+                        <xsl:element name="p">
+                            <xsl:attribute name="title">//tei:handNote</xsl:attribute>
+                            <em>
+                            <xsl:text>Hand: </xsl:text>
+                            <xsl:value-of select="root()//tei:handNote[@xml:id=$handId]"/>
+                        </em>
+                        </xsl:element>
+                    </xsl:if>
+                    <xsl:apply-templates/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when test="@type='regest'">
+                <div>
+                    <xsl:attribute name="class">
+                        <text>regest</text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when><!-- transcript -->
+            <xsl:when test="@type='transcript'">
+                <div>
+                    <xsl:attribute name="class">
+                        <text>transcript</text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when><!-- Anlagen/Beilagen  -->
+            <xsl:when test="@xml:id">
+                <xsl:element name="div">
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="@xml:id"/>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     
     <xsl:template match="tei:add">
         <xsl:element name="ins">

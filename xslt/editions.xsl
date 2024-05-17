@@ -305,7 +305,8 @@
                             <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
                         </div>
 
-                        <p style="text-align:center;">
+                        <div class="panel panel-default">
+                            <h4>Noten</h4>
                             <xsl:for-each select=".//tei:note[not(./tei:p)][ancestor::tei:body]">
                                 <div class="footnotes" id="{local:makeId(.)}">
                                     <xsl:element name="a">
@@ -326,8 +327,6 @@
                                     <xsl:apply-templates/>
                                 </div>
                             </xsl:for-each>
-                        </p>
-
                     </div>
                     <xsl:for-each select="//tei:back">
                         <div class="tei-back">

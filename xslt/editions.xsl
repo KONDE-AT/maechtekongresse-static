@@ -264,8 +264,7 @@
                                                         <td>
                                                             <xsl:for-each select="../tei:bibl">
                                                                 <a>
-                                                                    <xsl:attribute name="href">../pages/bibl.html#myTable=f<xsl:value-of select="$witId"/>
-                                                                    </xsl:attribute>
+                                                                    <xsl:attribute name="href"><xsl:value-of select="concat($witId, '.html')"/></xsl:attribute>
                                                                     <xsl:value-of select="."/>
                                                                 </a>
                                                             </xsl:for-each>

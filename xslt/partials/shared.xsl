@@ -638,5 +638,13 @@
             <xsl:apply-templates/>
         </code>
     </xsl:template>
+
+    <xsl:template match="tei:dateline">
+        <xsl:element name="p">
+            <xsl:attribute name="class">ed</xsl:attribute>
+            <xsl:attribute name="style">text-align:right;</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
  
 </xsl:stylesheet>

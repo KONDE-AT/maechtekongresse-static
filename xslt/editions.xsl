@@ -327,6 +327,109 @@
                                     <xsl:apply-templates/>
                                 </div>
                             </xsl:for-each>
+                        </div>
+                        <div class="panel panel-default">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <abbr title="Zitierhilfe">Zitierempfehlung</abbr>
+                                        </th>
+                                        <td>
+                                            <xsl:value-of select="normalize-space(string-join(//tei:titleStmt//tei:title[@type='main']/descendant-or-self::*[not(name()='expan')]/text(), ' '))"/>
+                                            <xsl:text>. In: </xsl:text>
+                                            <xsl:value-of select="$project_title"/>
+                                            <xsl:if test="//tei:titleStmt/tei:editor">
+                                                <xsl:text>, hrsg. von </xsl:text>
+                                                <xsl:for-each select="//tei:titleStmt/tei:editor[not(@role)]">
+                                                    <xsl:value-of select="./tei:persName/tei:forename"/>
+                                                    <xsl:text> </xsl:text>
+                                                    <xsl:value-of select="./tei:persName/tei:surname"/>
+                                                </xsl:for-each>
+                                                <xsl:if test="//tei:titleStmt/tei:editor[@role]">
+                                                    <xsl:text> unter Mitarbeit von </xsl:text>
+                                                    <xsl:for-each select="//tei:titleStmt/tei:editor[@role]">
+                                                        <span>
+                                                            <xsl:attribute name="title"><xsl:value-of select="./tei:persName/@ref"/></xsl:attribute>
+                                                            <xsl:value-of select="./tei:persName/tei:forename"/>
+                                                            <xsl:text> </xsl:text>
+                                                            <xsl:value-of select="./tei:persName/tei:surname"/>
+                                                        </span>
+                                                    </xsl:for-each>
+                                                </xsl:if>
+                                                <xsl:text>, </xsl:text>
+                                                <xsl:for-each select="//tei:publicationStmt/tei:pubPlace">
+                                                    <xsl:apply-templates/>
+                                                </xsl:for-each>
+                                                <xsl:text>: </xsl:text>
+                                                <xsl:for-each select="//tei:publicationStmt/tei:publisher">
+                                                    <xsl:apply-templates/>
+                                                </xsl:for-each>
+                                            </xsl:if>    
+                                            <xsl:text> 2018. URL: </xsl:text>
+                                            <xsl:value-of select="$base_url"/>
+                                            <xsl:value-of select="$link"/>
+                                            <xsl:text>.</xsl:text>
+                                        </td>
+                                    </tr>
+                            <xsl:if test="//tei:titleStmt/tei:respStmt">
+                                <tr>
+                                    <th>
+                                        <abbr title="//tei:titleStmt/tei:respStmt">Verantwortlichkeiten</abbr>
+                                    </th>
+                                    <td>
+                                            <ul>
+                                            <xsl:for-each select="//tei:titleStmt/tei:respStmt/tei:resp">
+                                            <li>
+                                                <xsl:if test="@role">
+                                                    <xsl:value-of select="@role"/>
+                                                    <xsl:text>: </xsl:text> 
+                                                </xsl:if> 
+                                                <xsl:value-of select="."/>
+                                                        <xsl:text>: </xsl:text>
+                                                <xsl:for-each select="following-sibling::tei:name">
+                                                    <xsl:value-of select="."/>
+                                                    <xsl:if test="position() != last()">, </xsl:if>
+                                                </xsl:for-each>
+                                            </li>
+                                            </xsl:for-each>
+                                            </ul>
+                                        <xsl:for-each select="//tei:notesStmt/tei:note">
+                                            <p>
+                                                <xsl:apply-templates select="."/>
+                                            </p>
+                                        </xsl:for-each>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <tr>
+                                <th>
+                                    <abbr title="//tei:availability//tei:p[1]">Lizenz</abbr>
+                                </th>
+                                <xsl:choose>
+                                    <xsl:when test="//tei:licence[@target]">
+                                        <td>
+                                            <a class="navlink" target="_blank" rel="noopener noreferrer">
+                                                <xsl:attribute name="href">
+                                                    <xsl:value-of select="//tei:licence[1]/data(@target)"/>
+                                                </xsl:attribute>
+                                                <xsl:value-of select="//tei:licence[1]/data(@target)"/>
+                                            </a>
+                                        </td>
+                                    </xsl:when>
+                                    <xsl:when test="//tei:licence">
+                                        <td>
+                                            <xsl:apply-templates select="//tei:licence"/>
+                                        </td>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <td>no license provided</td>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </tr>
+                            </tbody>
+                            </table>
+                    </div>
                     </div>
                     <xsl:for-each select="//tei:back">
                         <div class="tei-back">

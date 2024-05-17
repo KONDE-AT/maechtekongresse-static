@@ -161,12 +161,12 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="panel-body collapse" id="metadata">
+                        <div class="card-body collapse" id="metadata">
                             <xsl:for-each select="//tei:sourceDesc/tei:msDesc"><!-- Split -->
                                 <xsl:variable name="msDivId" select="@xml:id"/>
                                 <xsl:variable name="divlink" select="concat('#',$msDivId)"/>
-                                <div class="well">
-                                <div class="panel-body">
+                                <div class="card">
+                                <div class="card-body">
                                     <xsl:attribute name="id">m<xsl:value-of select="$msDivId"/>
                                     </xsl:attribute>
                                     <table class="table table-striped">
@@ -279,7 +279,7 @@
                             </xsl:for-each>
                     </div>
                         <div id="body">
-                            <div class="panel panel-body">
+                            <div class="card card-body">
                                 <xsl:if test="count(//tei:div) &gt; 1">
                                     <h3 id="clickme">
                                         <abbr title="Für Abschnitte klicken" style="color:#23527c">Abschnitte</abbr>
@@ -304,8 +304,7 @@
                             </div>
                             <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
                         </div>
-
-                        <div class="panel panel-default">
+                        <div class="card card-default">
                             <h4>Noten</h4>
                             <xsl:for-each select=".//tei:note[not(./tei:p)][ancestor::tei:body]">
                                 <div class="footnotes" id="{local:makeId(.)}">
@@ -328,7 +327,7 @@
                                 </div>
                             </xsl:for-each>
                         </div>
-                        <div class="panel panel-default">
+                        <div class="card card-default">
                             <table class="table table-striped">
                                 <tbody>
                                     <tr>
@@ -452,7 +451,7 @@
         <xsl:choose>
             <xsl:when test="@decls">
                 <xsl:element name="div">
-                    <xsl:attribute name="class">well</xsl:attribute>
+                    <xsl:attribute name="class">card</xsl:attribute>
                     <xsl:attribute name="id">
                         <xsl:value-of select="$msId"/>
                     </xsl:attribute>

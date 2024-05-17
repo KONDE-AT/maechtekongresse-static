@@ -501,11 +501,24 @@
     </xsl:template>
     
     <xsl:template match="tei:listBibl">
+        <ul>
         <xsl:for-each select=".//tei:bibl">
-            <li>
+            <xsl:sort order="ascending"/>
+            <li id="{./@xml:id}">
                 <xsl:apply-templates/>
             </li>
         </xsl:for-each>
+        </ul>
+    </xsl:template>
+    <xsl:template match="tei:listWit">
+        <ul>
+            <xsl:for-each select=".//tei:witness">
+                <xsl:sort order="ascending"/>
+                <li id="{./@xml:id}">
+                    <xsl:apply-templates/>
+                </li>
+            </xsl:for-each>
+        </ul>
     </xsl:template>
     
     <xsl:template match="tei:ptr">

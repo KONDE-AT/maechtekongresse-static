@@ -4,10 +4,15 @@
     version="2.0" exclude-result-prefixes="xsl tei xs">
     
     
-    <xsl:template match="tei:bibl" name="bibl_detail">
+    <xsl:template match="tei:witness" name="witness_detail">
         <p id="{@xml:id}">
             <xsl:apply-templates/>
         </p>
+    </xsl:template>
+    <xsl:template match="tei:bibl" name="bibl_detail">
+        <span style="d-block" id="{@xml:id}">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     <xsl:template match="tei:p">
         <p><xsl:apply-templates/></p>

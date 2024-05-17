@@ -37,13 +37,14 @@
                         </h1>
                         <!-- Literatur.xml -->
                         <xsl:apply-templates select=".//tei:body"/>
+                        
                         <xsl:for-each select="//tei:listWit//tei:witness"><!-- listwit.xml -->
                             <xsl:sort order="ascending"/>
-                            <p xml:id="{./@xml:id}"><xsl:apply-templates select="*[not(name()=('head','note'))]"/></p>
+                            <p xml:id="{./@xml:id}"><xsl:apply-templates select=".//*[not(name()=('head','note'))]"/></p>
                         </xsl:for-each>
                         <xsl:for-each select="//tei:listBibl//tei:bibl"><!-- listtreaties.xml -->
                             <xsl:sort order="ascending"/>
-                            <p xml:id="{./@xml:id}"><xsl:apply-templates select="*[not(name()=('head','note'))]"/></p>
+                            <p xml:id="{./@xml:id}"><xsl:apply-templates select=".//*[not(name()=('head','note'))]"/></p>
                         </xsl:for-each>
                     </div>
                 </main>

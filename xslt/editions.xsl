@@ -160,6 +160,7 @@
                                     </xsl:if>
                                 </tbody>
                             </table>
+                            <button  class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#metadata" aria-expanded="false" aria-controls="metadata">Metadaten zeigen/verstecken</button>
                         </div>
                         <div class="card-body collapse" id="metadata">
                             <xsl:for-each select="//tei:sourceDesc/tei:msDesc"><!-- Split -->

@@ -33,7 +33,7 @@
             <body class="d-flex flex-column h-100">
             <xsl:call-template name="nav_bar"/>
                 <main>
-                    <div class="container">
+                    <div class="container" style="width:1024px;min-width:1024px">
                         <h1>Inhaltsverzeichnis</h1>
                         <table class="table" id="myTable">
                             <thead>
@@ -43,7 +43,7 @@
                                     <th scope="col" tabulator-headerFilter="input">Titel</th>
                                     <th scope="col" tabulator-headerFilter="input">Weitere Dokumente</th>
                                     <th scope="col" tabulator-headerFilter="input">Datum</th>
-                                    <th scope="col" tabulator-headerFilter="input">Dateiname</th>
+                                    <!-- <th scope="col" tabulator-headerFilter="input">Dateiname</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,7 +66,7 @@
                                                 <xsl:otherwise><xsl:value-of select="//tei:editionStmt/tei:edition/tei:date[1]/text()"/></xsl:otherwise>
                                             </xsl:choose>
                                         </td>
-                                        <td><xsl:value-of select="tokenize($full_path, '/')[last()]"/></td>
+                                        <!-- <td><xsl:value-of select="tokenize($full_path, '/')[last()]"/></td> -->
                                     </tr>
                                 </xsl:for-each>
                             </tbody>

@@ -16,12 +16,15 @@ var configTOC = {
     dataLoader: true,
     columns: [
         {title:"#", field:"link", width:20},
-        {title:"Sigle", field:"sigle", width:50},
+        {title:"Sigle", field:"sigle", width:100},
         {title:"Titel", field:"title"},
         {title:"Weitere Dokumente", field:"docs", minWidth:300, width:300, formatter:"textarea", variableHeight:true},
-        {title:"Datum", field:"date"},
-        {title:"Dateiname", field:"filename"},
-    ]
+        {title:"Datum", field:"date", width:150},
+        // {title:"Dateiname", field:"filename"},
+    ],
+        initialSort:[
+            {column:"sigle", dir:"asc"}, //sort by this first
+        ]
 }
 
 var configRegest = {

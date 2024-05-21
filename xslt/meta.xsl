@@ -13,7 +13,8 @@
     <xsl:import href="partials/html_footer.xsl"/>
     <xsl:import href="./partials/entities.xsl"/>
 
-
+    <xsl:param name="back" select="tei:TEI//tei:back" as="node()?"/>
+    
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
@@ -63,10 +64,17 @@
                 </main>
                 <xsl:call-template name="html_footer"/>
                 <xsl:for-each select="//tei:back">
-                        <div class="tei-back">
-                            <xsl:apply-templates/>
-                        </div>
-                    </xsl:for-each>
+                    <div class="tei-back">
+                        <xsl:apply-templates/>
+                    </div>
+                </xsl:for-each>
+                <xsl:for-each select="descendant::tei:rs[contains(@ref, ' ')]">
+                    <xsl:variable name="modalId" select="xs:string(replace(replace(@ref, '#', '--'), ' ', ''))"/>
+                    <xsl:call-template name="rsmodal">
+                        <xsl:with-param name="modalId" select="$modalId"/>
+                        <xsl:with-param name="back" select="$back"/>
+                    </xsl:call-template>
+                </xsl:for-each>
                 <div id="loadModal"/>
             </body>
         </html>
@@ -382,7 +390,7 @@
                     <xsl:element name="a">
                         <xsl:attribute name="data-bs-toggle">modal</xsl:attribute>
                         <xsl:attribute name="data-bs-target">
-                            <xsl:value-of select="data(@ref)"/>
+                            <xsl:value-of select="tokenize(data(@ref), ' ')"/>
                             <!-- <xsl:value-of select="concat('#', @key)"/> -->
                         </xsl:attribute>
                         <xsl:apply-templates/>

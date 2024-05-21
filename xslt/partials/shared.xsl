@@ -171,6 +171,7 @@
                 <xsl:when test="contains(data(@ref), 'treaties') or ./@type='treaties'">treaties</xsl:when>
             </xsl:choose>
         </xsl:variable>
+        <xsl:variable name="modalId" select="if (contains(@ref, ' ')) then xs:string(replace(replace(@ref, '#', '--'), ' ', '')) else @ref"/>
         <xsl:choose>
             <xsl:when test="$entityType eq 'none'"><xsl:apply-templates/></xsl:when><!-- these are preceding tei:note elements -->
             <xsl:otherwise>
@@ -180,8 +181,7 @@
                     </xsl:attribute>
                         <xsl:attribute name="data-bs-toggle">modal</xsl:attribute>
                         <xsl:attribute name="data-bs-target">
-                            <xsl:value-of select="data(@ref)"/>
-                            <!-- <xsl:value-of select="concat('#', @key)"/> -->
+                            <xsl:value-of select="if (starts-with($modalId, '#')) then $modalId else concat('#', $modalId)"/>
                         </xsl:attribute>
                         <xsl:apply-templates/>
                 </span></strong>

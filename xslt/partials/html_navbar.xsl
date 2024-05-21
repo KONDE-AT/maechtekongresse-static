@@ -29,13 +29,13 @@
                                     <li><hr class="dropdown-divider"/></li>
                                     <li><a class="dropdown-item" href="Einleitung.html">Einleitung</a></li>
                                     <li><hr class="dropdown-divider"/></li>
-                                    <li><a class="dropdown-item" href="#">Dokumente</a></li>
+                                    <!-- <li><a class="dropdown-item" href="#">Dokumente</a></li> -->
                                     <li><a class="dropdown-item" href="toc.html?filterstring=A">Dokumente: Kongress von Aachen 1818</a></li>
                                     <li><a class="dropdown-item" href="toc.html?filterstring=T">Dokumente: Kongress von Troppau/Opava 1820</a></li>
                                     <li><a class="dropdown-item" href="toc.html?filterstring=L">Dokumente: Kongress von Laibach/Ljubljana 1821</a></li>
                                     <li><a class="dropdown-item" href="toc.html?filterstring=V">Dokumente: Kongress von Verona 1822</a></li>
                                     <li><hr class="dropdown-divider"/></li>
-                                    <li><a class="dropdown-item" href="#">Bestandsbeschreibungen</a></li>
+                                    <!-- <li><a class="dropdown-item" href="#">Bestandsbeschreibungen</a></li> -->
                                     <li><a class="dropdown-item" href="BestandsbeschreibungAachen.html">Bestandsbeschreibung Kongress von Aachen 1818</a></li>
                                     <li><a class="dropdown-item" href="BestandsbeschreibungTroppau.html">Bestandsbeschreibung Kongress von Troppau/Opava 1820</a></li>
                                     <li><a class="dropdown-item" href="BestandsbeschreibungLaibach.html">Bestandsbeschreibung Kongress von Laibach/Ljubljana 1821</a></li>

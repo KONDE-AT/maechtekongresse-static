@@ -646,4 +646,57 @@
         </xsl:element>
     </xsl:template>
  
+    <xsl:template name="rsmodal">
+        <xsl:param name="modalId" as="xs:string"/>
+        <xsl:param name="back" as="node()?"/>
+        <div class="modal fade" id="{$modalId}" tabindex="-1" aria-labelledby="{$modalId}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle4">Auswahl</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"/>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <xsl:for-each select="tokenize($modalId, '--')">
+                                <xsl:variable name="current" select="." as="xs:string"/>
+                                <xsl:if test=". != ''">
+                                    <li>
+                                        <xsl:variable name="eintrag" select="$back//tei:*[@xml:id = $current][1]" as="node()?"/>
+                                        <xsl:variable name="typ" select="$eintrag/name()" as="xs:string?"/>
+                                        <xsl:element name="a">
+                                            <xsl:attribute name="href">
+                                                <xsl:value-of select="concat($current, '.html')"/>
+                                            </xsl:attribute>
+                                            <xsl:choose>
+                                                <xsl:when test="$typ = 'place'">
+                                                  <xsl:value-of select="$eintrag/tei:placeName[1]"/>
+                                                </xsl:when>
+                                                <xsl:when test="$typ = 'bibl'">
+                                                  <xsl:value-of select="$eintrag/normalize-space()"/>
+                                                </xsl:when>
+                                                <xsl:when test="$typ = 'org'">
+                                                  <xsl:value-of select="$eintrag/tei:orgName[1]"/>
+                                                </xsl:when>
+                                                <xsl:when test="$typ = 'person'">
+                                                  <xsl:value-of select="$eintrag/tei:persName[1]"/>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                  <xsl:text>offen</xsl:text>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                        </xsl:element>
+                                    </li>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            >Schließen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </xsl:template>
 </xsl:stylesheet>

@@ -24,7 +24,7 @@
         <xsl:variable name="label">
             <xsl:value-of select="./tei:persName[1]//text()"/>
         </xsl:variable>
-        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{$label}" aria-hidden="true">
+        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" z-index="100" aria-labelledby="{$label}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -51,7 +51,7 @@
         <xsl:variable name="label">
             <xsl:value-of select="./tei:placeName[1]/text()"/>
         </xsl:variable>
-        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{$label}" aria-hidden="true">
+        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" z-index="100" aria-labelledby="{$label}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -78,7 +78,7 @@
         <xsl:variable name="label">
             <xsl:value-of select="./tei:orgName[1]/text()"/>
         </xsl:variable>
-        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{$label}" aria-hidden="true">
+        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" z-index="100" aria-labelledby="{$label}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -102,7 +102,7 @@
         <xsl:variable name="selfLink">
             <xsl:value-of select="concat(data(@xml:id), '.html')"/>
         </xsl:variable>
-        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" z-index="100" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">

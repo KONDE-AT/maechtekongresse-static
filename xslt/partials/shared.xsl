@@ -649,7 +649,7 @@
     <xsl:template name="rsmodal">
         <xsl:param name="modalId" as="xs:string"/>
         <xsl:param name="back" as="node()?"/>
-        <div class="modal fade" id="{$modalId}" tabindex="-1" aria-labelledby="{$modalId}" aria-hidden="true">
+        <div class="modal fade" id="{$modalId}" tabindex="-1" z-index="100" aria-labelledby="{$modalId}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

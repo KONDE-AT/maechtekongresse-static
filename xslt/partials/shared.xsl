@@ -92,7 +92,7 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template><!-- Verweise auf andere Dokumente   -->
-    <xsl:template match="tei:ref">
+    <xsl:template match="tei:ref[not(descendant::*[name()=('rs','placeName','persName', 'orgName', 'origPlace', 'region', 'country')])]">
         <xsl:choose>
             <xsl:when test="@target[contains(.,'.xml')]">
                 <xsl:element name="a">
@@ -112,7 +112,47 @@
                 </xsl:element>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template><!-- resp -->
+    </xsl:template>
+    <xsl:template match="tei:ref[descendant::*[name()=('rs','placeName','persName', 'orgName', 'origPlace', 'region', 'country')]]">
+        <xsl:choose>
+            <xsl:when test="@target[contains(.,'.xml')]">
+                <xsl:for-each-group select="./node()" group-adjacent="./name()">
+                    <xsl:choose>
+                        <xsl:when test="self::*[name()=('rs','placeName','persName', 'orgName', 'origPlace', 'region', 'country')]">
+                            <xsl:apply-templates select="current-group()"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:element name="a">
+                            <xsl:attribute name="href">
+                            <xsl:value-of select="replace(functx:substring-after-last(ancestor::tei:ref/@target, '/'), '.xml', '.html')"/>
+                            </xsl:attribute>
+                                <xsl:apply-templates select="current-group()"/>
+                            </xsl:element>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each-group>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:for-each-group select="./node()" group-adjacent="./name()">
+                    <xsl:choose>
+                        <xsl:when test="self::*[name()=('rs','placeName','persName', 'orgName', 'origPlace', 'region', 'country')]">
+                            <xsl:apply-templates select="current-group()"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:element name="a">
+                            <xsl:attribute name="href">
+                            <xsl:value-of select="replace(functx:substring-after-last(parent::tei:ref/@target, '/'), '.xml', '.html')"/>
+                            <xsl:value-of select="parent::tei:ref/@decls"/>
+                            </xsl:attribute>
+                                <xsl:apply-templates select="current-group()"/>
+                            </xsl:element>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each-group>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <!-- resp -->
     <xsl:template match="tei:respStmt/tei:resp">
         <xsl:apply-templates/> 
     </xsl:template>

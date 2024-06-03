@@ -118,7 +118,7 @@
                 komplexes System verschiedener Allianzen abgesichert und erfuhr als Europäisches
                 Konzert einen gewissen Grad an Institutionalisierung.</p>
             <p>Dieser strukturelle Wandel in der Außenpolitik erforderte eine verdichtete
-                Kommunikation zwischen den Staaten. In <a href="places.html#myTable=fAachen">Aachen</a>, <a href="places.html#myTable=fAachen">Troppau</a>, <a href="places.html#myTable=fLaibach">Laibach</a> und <a href="places.html#myTable=fVerona">Verona</a> trafen
+                Kommunikation zwischen den Staaten. In <a href="loc_1.html">Aachen</a>, <a href="loc_60.html">Troppau</a>, <a href="loc_65.html">Laibach</a> und <a href="loc_68.html">Verona</a> trafen
                 die Mächtevertreter in der Nachfolge des Wiener Kongresses zusammen, um kollektiv
                 über offene Fragen von europäischem Interesse zu beraten, Krisen abzuwenden
                 beziehungsweise einer Lösung zuzuführen und Ruhe und Frieden in Europa zu

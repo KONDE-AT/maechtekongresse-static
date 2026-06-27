@@ -15,7 +15,7 @@ current_schema = {
     "enable_nested_fields": True,
     "metadata": {
         "owners": ["Peter Andorfer", "Stephan Kurz"],
-        "description": "https://github.com/KONDE-AT/grundbuecher-static",
+        "description": "https://github.com/KONDE-AT/maechtekongresse-static",
         "service_ids": [10920],
     },
     "fields": [

@@ -13,3 +13,5 @@ mv ./maechtekongresse-master/data/meta ./data
 
 rm master.zip
 rm -rf ./maechtekongresse-master
+
+./shellscripts/dl_imprint.sh

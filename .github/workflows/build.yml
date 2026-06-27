@@ -19,34 +19,39 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build_pages:
-    name: Publish Edition as GitHub Pages Website
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     env:
-      ANT_OPTS: -Xmx5g
+      ANT_OPTS: -Xmx6g
       TYPESENSE_HOST: typesense.acdh-dev.oeaw.ac.at
       TYPESENSE_PORT: 443
       TYPESENSE_PROTOCOL: https
       TYPESENSE_API_KEY: ${{secrets.TYPESENSE_API_KEY}}
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}
     steps:
-    - name: Perform Checkout
-      uses: actions/checkout@v4
-    - name: Install Saxon, Ant and Python
-      run: |
-        apt-get update && apt-get install openjdk-11-jre-headless ant -y --no-install-recommend
-        ./shellscripts/script.sh
-        pip install -r requirements.txt
-    - name: Fetch Data
-      run: ./fetch_data.sh
-    - name: Fetch Imprint
-      run: ./shellscripts/dl_imprint.sh
-    - name: Process Data
-      run: ./process.sh
-    - name: Build
-      run: |
-        ant
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{secrets.GITHUB_TOKEN}}
-        publish_dir: ./html
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: set up uv (Python)
+        uses: astral-sh/setup-uv@v8.1.0
+      - name: Fetch the Data
+        run: ./fetch_data.sh
+      - name: process data
+        run: ./process.sh
+      - name: search index
+        run: uv run make_typesense_index.py
+      - name: Build Edition HTMLS
+        run: ant
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: './html'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

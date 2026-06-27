@@ -13,6 +13,11 @@ files = glob.glob("./data/editions/*.xml")
 current_schema = {
     "name": TYPESENSE_COLLECTION_NAME,
     "enable_nested_fields": True,
+    "metadata": {
+        "owners": ["Peter Andorfer", "Stephan Kurz"],
+        "description": "https://github.com/KONDE-AT/grundbuecher-static",
+        "service_ids": [10920],
+    },
     "fields": [
         {"name": "id", "type": "string", "sort": True},
         {"name": "title", "type": "string", "sort": True},

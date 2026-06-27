@@ -43,7 +43,7 @@ jobs:
       - name: process data
         run: ./process.sh
       - name: search index
-        run: uv run make_typesense_index.py
+        run: uv run make_ts_index.py
       - name: Build Edition HTMLS
         run: ant
       - name: Setup Pages

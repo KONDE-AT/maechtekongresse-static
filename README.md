@@ -2,11 +2,10 @@
 
 Repository for a DSE-Static-Cookiecutter version of the **maechtekongresse** edition.
 
-Migration to static site approach: March 2024. TEI XML Data remains unchanged. 
+Migration to static site approach: March 2024. TEI XML Data remains unchanged.
 
-* data is fetched from https://github.com/KONDE-AT/maechtekongresse
+* data is fetched from <https://github.com/KONDE-AT/maechtekongresse>
 * build with [DSE-Static-Cookiecutter](https://github.com/acdh-oeaw/dse-static-cookiecutter)
-
 
 --
 
@@ -14,11 +13,16 @@ This is the public Repository for the digital scholarly edition of the Mächteko
 
 The web application curated here is deployed at <https://maechtekongresse.acdh.oeaw.ac.at/>, which has the following registered ISBN: 978-3-9504783-0-3.
 
-An additional copy of the TEI data is kept at the Austrian Academy of Sciences’ long term research data repository ARCHE under the identifier <http://hdl.handle.net/21.11115/0000-000C-2093-9>/<https://id.acdh.oeaw.ac.at/maechtekongresse>. 
+An additional copy of the TEI data is kept at the Austrian Academy of Sciences’ long term research data repository ARCHE under the identifier <http://hdl.handle.net/21.11115/0000-000C-2093-9>/<https://id.acdh.oeaw.ac.at/maechtekongresse>.
 
 The web application derived from an earlier version of <https://github.com/KONDE-AT/dsebaseapp>.
 
-Data in `data` is licenced under CC-BY-SA 4.0 as stated in the TEI files. 
+## License
+
+Data in `data` is licenced under CC-BY-SA 4.0 as stated in the TEI files.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4590269.svg)](https://doi.org/10.5281/zenodo.4590269)
 
+## SAXON-HE
+
+The projects also includes Saxon-HE, which is licensed separately under the Mozilla Public License, Version 2.0 (MPL 2.0). See the dedicated [LICENSE.txt](saxon/notices/LICENSE.txt)
